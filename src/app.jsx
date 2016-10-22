@@ -1,7 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import MainComponent from './views/main.jsx';
+import React from 'react'
+import {render} from 'react-dom'
+import { Provider } from 'react-redux'
+import MainComponent from './views/main.jsx'
+import store from './store.js';
 
-ReactDOM.render(<MainComponent />, document.getElementById('content'));
+render(
+	<Provider store={store}>
+		<MainComponent />
+	</Provider>, 
+	document.getElementById('content')
+);
 
-console.log('React started');

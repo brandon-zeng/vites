@@ -7,16 +7,21 @@ class MenuComponent extends React.Component {
 		this.state = {};
 	}
 
+    onLinkClick(id) {
+    	this.props.onClick(id);
+    }
+
 	render() {
+		
 		return (
 			<div className={ComponentStyle['menuArea']}>
 				<table className={ComponentStyle['menuTable']}>
 					<tbody>
 						<tr>
-							<td>Headphones</td>
-							<td>LEDs</td>
-							<td>Missions</td>
-							<td>Contacts</td>
+							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "1")}>Headphones</a></td>
+							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "2")}>LEDs</a></td>
+							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "3")}>Missions</a></td>
+							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "4")}>Contacts</a></td>
 						</tr>
 					</tbody>
 				</table>

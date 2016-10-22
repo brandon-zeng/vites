@@ -1,7 +1,6 @@
-import React from 'react';
-import BrandingComponent from './branding.jsx'
-import MenuComponent from './menu.jsx'
-import ComponentStyle from '../styles/content.less'
+import React from 'react'
+import HeaderContainer from '../containers/header_container.js'
+import ContentContainer from '../containers/content_container.js'
 
 class MainComponent extends React.Component {
 
@@ -10,26 +9,13 @@ class MainComponent extends React.Component {
 		this.state = {};
 	};
 
-	// var backgroundStyle = {
-	// 	backgroundImage: "url('static/img/sport.jpg')",
-	// 	backgroundSize: "cover",
- //    	backgroundRepeat: "no-repeat",
- //    	backgroundPositionX: -600
-	// };
-
 	render() {
 		return (
-			<div style={{
-							backgroundImage: "url('static/img/sport.jpg')",
-							backgroundSize: "cover",
-					    	backgroundRepeat: "no-repeat",
-					    	backgroundPositionX: -600
-						}}>
-				<div style={{position:"absolute", top: 0, zIndex: 9999}}>
-					<BrandingComponent />
-					<MenuComponent />
+			<div>
+				<div style={{zIndex: 9999, width: "100%", background: "#ecebe8"}}>
+					<HeaderContainer />
 				</div>
-				<div className={ComponentStyle['contentBox']}> <br/><br/>detail page comes here </div>
+				<ContentContainer />
 				<div> footer: Vite Studio </div>
 			</div>
 		);

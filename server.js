@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 
