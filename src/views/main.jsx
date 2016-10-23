@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderContainer from '../containers/header_container.js'
 import ContentContainer from '../containers/content_container.js'
+import SimpleSlider from './imageSlider.jsx'
 
 class MainComponent extends React.Component {
 

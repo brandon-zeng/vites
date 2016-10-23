@@ -1,5 +1,6 @@
 import React from 'react'
 import ComponentStyle from '../styles/content.less'
+import SimpleSlider from './imageSlider.jsx'
 
 class contentBox extends React.Component {
 
@@ -7,6 +8,18 @@ class contentBox extends React.Component {
 		super(props);
 		this.state = {};
 	};
+
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.pageIndex === '4' && this.props.pageIndex !== nextProps.pageIndex) {
+			nextProps.fetchDb();
+		}
+	}
+
+	componentWillMount() {
+		if (this.props.pageIndex === '4') {
+			this.props.fetchDb();
+		}
+	}
 
 	render() {
 		let textDiv;
@@ -25,10 +38,12 @@ class contentBox extends React.Component {
 				textDiv = <div className={ComponentStyle['textArea']}> this is the 2 page </div>;
 				break;
 			case "3" : 
-				textDiv = <div className={ComponentStyle['textArea']}> this is the 3 page </div>;
+				textDiv = <div className={ComponentStyle['textArea']}> <SimpleSlider /> </div>;
 				break;
 			case "4" : 
-				textDiv = <div className={ComponentStyle['textArea']}> this is the 4 page </div>;
+				textDiv = <div className={ComponentStyle['textArea']}> 
+							{this.props.dbData.isFetching?'Waiting for the db data...' : JSON.stringify(this.props.dbData.data)} 
+							</div>;
 				break;
 			default: 
 				textDiv;

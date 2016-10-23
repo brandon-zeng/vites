@@ -32,11 +32,11 @@ var myData={
 	answer: "who are you?"
 }
 
-router.get('/more/:name', function (req, res) {
+router.get('/api/more/:name', function (req, res) {
 	res.send('Hello: ' + req.params.name);
 });
 
-router.get('/db', function (req, res) {
+router.get('/api/db', function (req, res) {
 	dbb(res);
 });
 //*******************************

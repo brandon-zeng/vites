@@ -8,6 +8,7 @@ var knex = require('knex')({
       password: 'postgres'
   	},
 });
+var sleep = require('sleep');
 
 var bookshelf = require('bookshelf')(knex);
 
@@ -16,15 +17,12 @@ var Playground = bookshelf.Model.extend({
 })
 
 module.exports = function(res) {
-	// knex.select().from('playground').then(function(rows){
-	// 	console.log(rows);
-	// 	res.send(JSON.stringify(rows));
-	// }).catch(function(err){
-	// 	console.log(err);
-	// 	res.status(501).send(JSON.stringify(err));
-	// });
+	/*
+	console.log('sleep for 1 second for debug perpose');
+	sleep.sleep(1);
+	*/
 	Playground.forge().fetchAll().then(function(rows){
-		console.log(rows);
+		console.log(JSON.stringify(rows));
 		res.send(JSON.stringify(rows));
 	}).catch(function(err){
 		console.log(err);

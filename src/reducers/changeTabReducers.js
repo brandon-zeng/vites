@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import {CHANGE_TAB, changeTab} from '../actions/changeTab.js'
 
-function tabChanger(state = {pageIndex: "0"}, action) {
+let tabChanger = (state = {pageIndex: "0"}, action) => {
 	switch (action.type) {
 		case CHANGE_TAB:
 			return {
@@ -12,8 +12,18 @@ function tabChanger(state = {pageIndex: "0"}, action) {
 	}
 }
 
-function userHelper(state = {user: "admin"}, action) {
+let dbFetcher = (state = {data: [], isFetching: false}, action) => {
 	switch (action.type) {
+		case 'begin_fetch_db':
+			return {
+				data: [],
+				isFetching: true
+			}
+		case 'update_fetch_db':
+			return {
+				data: action.data,
+				isFetching: false
+			}
 		default:
 			return state
 	}
@@ -21,7 +31,7 @@ function userHelper(state = {user: "admin"}, action) {
 
 const viteApp = combineReducers({
   tabChanger,
-  userHelper
+  dbFetcher
 })
 
 
