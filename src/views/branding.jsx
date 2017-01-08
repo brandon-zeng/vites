@@ -14,8 +14,9 @@ class MenuComponent extends React.Component {
 	render() {
 		return (
 			<div className={ComponentStyle['brandArea']}>
-				<a href="javascript:void(0)" onClick={this.onLinkClick.bind(this)}>
-					<img src="/img/brand.jpg" alt="Vite Origin" />
+				<a href="javascript:void(0)" onClick={this.onLinkClick.bind(this)} className={ComponentStyle['anchor']}>
+					{/* <img src="/img/brand.jpg" alt="Vite Origin" /> */}
+					<span style={{color: "blue"}}>vi</span><span style={{color: "red"}}>te</span>
 				</a>
 			</div>
 		);

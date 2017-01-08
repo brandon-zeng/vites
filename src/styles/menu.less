@@ -4,22 +4,34 @@
 :local {
 	.menuArea {
 		height: @theHeight;
-		background: @background;
 	    float: left;
 	    line-height: 340%;
-	    clear: right
+	    clear: right;
+	    margin-left: 50px;
 	}		
 	.menuTable {
 	    border-collapse: collapse;
-	    border: 1px solid black;
-	    //margin: auto 10px auto auto;
 	    color: #454545;
 	    text-transform: uppercase;
 	    font-weight: normal;
 	    font-family: Oswald;
 	}
-	.menuTable tr, .menuTable td {
-		border: 1px solid black;
-		padding: 0 5px;
+	.menuTable td {
+		/*border-left: 1px solid #D9D1CE;
+    	border-right: 1px solid #D9D1CE;*/
+		padding: 0 20px;
+	}
+	.menuTable td:hover {
+		background-color: white;
+    	opacity: 1;
+    	transition: background 125ms ease-in 0s;
+	}
+	.menuTable a {
+		text-decoration: none;		
+    	height: 100%;
+    	display: inline-block;
+    	color: #454545;
+    	transition: color 125ms ease-in 0s;
+    	text-transform: uppercase;
 	}
 }

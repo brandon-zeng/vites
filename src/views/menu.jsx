@@ -19,9 +19,8 @@ class MenuComponent extends React.Component {
 					<tbody>
 						<tr>
 							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "1")}>Headphones</a></td>
-							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "2")}>LEDs</a></td>
-							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "3")}>Missions</a></td>
-							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "4")}>Contacts</a></td>
+							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "2")}>Missions</a></td>
+							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "3")}>Contacts</a></td>
 						</tr>
 					</tbody>
 				</table>

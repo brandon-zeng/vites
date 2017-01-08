@@ -1,6 +1,13 @@
 :local {
+
+    .contentBoxSlide {    
+        clear: both;
+        overflow: auto;
+    }
+
 	.contentBox {
-		height: 700px;
+		height: 500px;
+		width: 100%;
 		color: white;
 		background-image: url("/img/sport.jpg");
 		background-size: cover;
@@ -16,5 +23,27 @@
             background-color: whitesmoke;
             color: black;
     	}
+	}
+
+	.feature {
+		float: left;
+		width: 33.3%;
+		padding: 5px 5px;
+		box-sizing: border-box;
+
+		.imgArea {
+			    display: block;
+    			margin: auto;
+		}
+
+		.textArea {
+			background-color: #ffffff;
+			padding: 0px 5px;
+
+			h4 {
+				color: #00aec5;
+				text-align: center;
+			}
+		}
 	}
 }

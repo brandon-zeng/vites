@@ -23,6 +23,8 @@ class contentBox extends React.Component {
 
 	render() {
 		let textDiv;
+/*		let containerClass= (this.props.pageIndex === "0")?ComponentStyle['contentBoxSlide']:ComponentStyle['contentBox']; */
+		let containerClass=ComponentStyle['contentBox'];
 /*
 		if (this.props.pageIndex === "1") {
 			textDiv = <div className={ComponentStyle['textArea']}> this is the first page </div>;
@@ -38,20 +40,34 @@ class contentBox extends React.Component {
 				textDiv = <div className={ComponentStyle['textArea']}> this is the 2 page </div>;
 				break;
 			case "3" : 
-				textDiv = <div className={ComponentStyle['textArea']}> <SimpleSlider /> </div>;
-				break;
-			case "4" : 
 				textDiv = <div className={ComponentStyle['textArea']}> 
 							{this.props.dbData.isFetching?'Waiting for the db data...' : JSON.stringify(this.props.dbData.data)} 
 							</div>;
 				break;
 			default: 
-				textDiv;
+				/*  textDiv = <SimpleSlider />;  */
+				textDiv = <div style={{width: 500, height: 100}}> 1 </div>;
 		}
 
 		return (
-			<div className={ComponentStyle['contentBox']}>
-				{textDiv}
+			<div>
+				<div className={containerClass}>
+					{/* {textDiv} */}
+				</div>
+				<div style={{position: "relative", display: "block", margin: 10, "margin-top": 30 }}>
+					<div className={ComponentStyle['feature']}> 
+						<img src={'/img/selfie-family.png'} alt={"family"}  className={ComponentStyle['imgArea']}/> 
+						<div className={ComponentStyle['textArea']}> <h4>superior sound</h4> <p >the best sound in the world that exceeds your expectation</p></div> 
+					</div>
+					<div className={ComponentStyle['feature']}> 
+						<img src={'/img/selfie-group.jpg'} alt={"group"}  className={ComponentStyle['imgArea']}/>
+						<div className={ComponentStyle['textArea']}> <h4>remote camera control</h4> <p>you can make a selfie in distance without a stick even when you are doing excercise</p></div>  
+					</div>
+					<div className={ComponentStyle['feature']}>
+						<img src={'/img/selfie-self.png'} alt={"selfie"}  className={ComponentStyle['imgArea']}/> 
+						<div className={ComponentStyle['textArea']}> <h4>egonomic design</h4> <p>fits your ear well, it is a designed to work out with you</p></div> 
+					</div>
+				</div>
 			</div>
 		);
 	}

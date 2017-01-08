@@ -13,11 +13,12 @@ class MainComponent extends React.Component {
 	render() {
 		return (
 			<div>
-				<div style={{zIndex: 9999, width: "100%", background: "#ecebe8"}}>
+				<div style={{zIndex: 9999, width: "100%", marginTop: 10, overflow:"hidden"}}>
 					<HeaderContainer />
 				</div>
 				<ContentContainer />
-				<div> footer: Vite Studio </div>
+				<hr />
+				<div style={{clear: "both"}}> footer: Vite Studio </div>
 			</div>
 		);
 	}
