@@ -2,6 +2,7 @@ import React from 'react'
 import HeaderContainer from '../containers/header_container.js'
 import ContentContainer from '../containers/content_container.js'
 import SimpleSlider from './imageSlider.jsx'
+import Footer from './footer.jsx'
 
 class MainComponent extends React.Component {
 
@@ -17,8 +18,8 @@ class MainComponent extends React.Component {
 					<HeaderContainer />
 				</div>
 				<ContentContainer />
-				<hr />
-				<div style={{clear: "both"}}> footer: Vite Studio </div>
+				<hr style={{clear: "both"}}/>
+				<Footer />
 			</div>
 		);
 	}

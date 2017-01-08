@@ -54,7 +54,7 @@ class contentBox extends React.Component {
 				<div className={containerClass}>
 					{/* {textDiv} */}
 				</div>
-				<div style={{position: "relative", display: "block", margin: 10, "margin-top": 30 }}>
+				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30 }}>
 					<div className={ComponentStyle['feature']}> 
 						<img src={'/img/selfie-family.png'} alt={"family"}  className={ComponentStyle['imgArea']}/> 
 						<div className={ComponentStyle['textArea']}> <h4>superior sound</h4> <p >the best sound in the world that exceeds your expectation</p></div> 
