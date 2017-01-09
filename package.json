@@ -37,8 +37,14 @@
     "sleep": "^4.0.0",
     "style-loader": "^0.13.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "start": "node server.js",
+    "build": "webpack",
+    "build-run": "webpack && node server.js",
+    "build-run-forever": "webpack && forever start server.js > stdout.txt 2 > stderr.txt &",
+    "lint": "eslint src/**",
+    "test": "node_modules/.bin/nyc --require babel-register node_modules/.bin/mocha ./src/**/test/*"
+
   },
   "author": "Brandon",
   "license": "ISC"

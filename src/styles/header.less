@@ -4,6 +4,23 @@
 @background-highlight: #00aec5;
 
 :local {
+	.headerContainer {
+		z-index: 999;
+		width: 100%; 
+		padding-top: 10px; 
+		padding-left: 100px; 
+		background-color: white;
+		overflow: auto;
+		position: fixed;
+
+		@media screen and (max-width:900px) {
+			padding-left: 10px;
+		}
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			padding-left: 0px;
+		}
+	}
 	.brandArea {
 		//width: @theWidth;
 		//height: @theHeight;
@@ -14,6 +31,10 @@
 		text-align: center;
 		margin-bottom: 15px;
 
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			float: none;
+			display: block;
+		}
 		img {
 			max-height: 56px;
 			margin: auto;
@@ -29,28 +50,44 @@
 			font-size: 72px;
 		}
 	}
-	.headerContainer {
-		z-index: 999;
-		width: 100%; 
-		margin-top: 10px; 
-		margin-left: 100px; 
-		margin-bottom: 15px;
-
-		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
-			margin-left: 20px;
-		}
-	}
 	.menuIcon {
 		display: none;
 
 		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
-			display: inline-block;
-			float: right;
-			margin-right: 40px;
+			display: block;
+			position: absolute;
+			top: 20px;
+			left: 10px;
 		}
 
 		button {
 			font-size: 48px;
+		}
+	}
+	.menuBuy {
+		display: block;		
+		position: absolute;
+		top: 20px;
+		right: 110px;
+		background-color: @background-highlight;
+		color: white;
+
+		@media screen and (max-width:900px) {
+			right: 20px;
+		}
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			right: 10px;
+			top: 30px;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 24px;
+			color: white;
+			height: 30px;
+			line-height: 60px;
+			padding: 20px;
 		}
 	}
 	.menuArea {
@@ -66,8 +103,8 @@
 		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
 			margin-left: auto;
 			margin-right: 60px;
+			line-height: 350%;
 			clear: both;
-			float: right;
 		}
 
 	}		
@@ -85,7 +122,6 @@
 		padding: 0 20px;
 
 		@media screen and (max-width:900px) {
-			margin-left: 10px;
 			text-align: right;
 		}
 	}

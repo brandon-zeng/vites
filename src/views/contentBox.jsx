@@ -50,7 +50,7 @@ class contentBox extends React.Component {
 		}
 
 		return (
-			<div>
+			<div style={{paddingTop: 100}}>
 				<div className={containerClass}>
 					{/* {textDiv} */}
 				</div>
