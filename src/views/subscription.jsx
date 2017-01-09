@@ -12,7 +12,7 @@ class MenuComponent extends React.Component {
 		return (
 			<div className={ComponentStyle['subscription']}>
 				<div className={ComponentStyle['subCap']}>
-					<h2>subscribe to our newsletter </h2>
+					<h2>Subscribe to our newsletters </h2>
 					<p>for updates and promotions </p>
 				</div>
 				<div className={ComponentStyle['subInputArea']}>

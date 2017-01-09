@@ -1,0 +1,127 @@
+@theHeight: 56px;
+@theWidth: 120px;
+@background: #ecebe8;
+@background-highlight: #00aec5;
+
+:local {
+	.brandArea {
+		//width: @theWidth;
+		//height: @theHeight;
+		//line-height: 310%;
+		font-size: 20px;
+		font-weight: normal;
+		float: left;
+		text-align: center;
+		margin-bottom: 15px;
+
+		img {
+			max-height: 56px;
+			margin: auto;
+		}
+	}
+	.anchor {
+		font-size: 64px;
+    	text-decoration: none;
+    	margin-left: 20px;
+    	margin-right: 20px;
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			font-size: 72px;
+		}
+	}
+	.headerContainer {
+		z-index: 999;
+		width: 100%; 
+		margin-top: 10px; 
+		margin-left: 100px; 
+		margin-bottom: 15px;
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			margin-left: 20px;
+		}
+	}
+	.menuIcon {
+		display: none;
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			display: inline-block;
+			float: right;
+			margin-right: 40px;
+		}
+
+		button {
+			font-size: 48px;
+		}
+	}
+	.menuArea {
+	    float: left;
+	    line-height: 500%;
+	    clear: right;
+	    margin-left: 100px;
+
+		@media screen and (max-width:900px) {
+			margin-left: 20px;
+		}
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			margin-left: auto;
+			margin-right: 60px;
+			clear: both;
+			float: right;
+		}
+
+	}		
+	.menuTable {
+	    border-collapse: collapse;
+	    color: #454545;
+	    text-transform: uppercase;
+	    font-weight: normal;
+	    font-family: Oswald;
+		font-size: 20px;
+	}
+	.menuTable td {
+		/*border-left: 1px solid #D9D1CE;
+    	border-right: 1px solid #D9D1CE;*/
+		padding: 0 20px;
+
+		@media screen and (max-width:900px) {
+			margin-left: 10px;
+			text-align: right;
+		}
+	}
+	.menuTable td:hover {
+		background-color: blue;
+    	opacity: 1;
+    	transition: background 125ms ease-in 0s;
+	}
+
+	.menuTable td:hover a{
+		color: white;
+	}
+
+	.menuTable a {
+		text-decoration: none;		
+    	height: 100%;
+    	display: inline-block;
+    	color: #454545;
+    	transition: color 125ms ease-in 0s;
+    	text-transform: uppercase;
+	}
+
+	.menuItem {
+		display: inline-block;
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			display: none;
+		}
+	}
+
+	.menuItemOpen {
+		display: inline-block;
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			display: block;
+		}
+	}
+
+}

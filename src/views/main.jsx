@@ -14,11 +14,9 @@ class MainComponent extends React.Component {
 	render() {
 		return (
 			<div>
-				<div style={{zIndex: 9999, width: "100%", marginTop: 10, overflow:"hidden"}}>
-					<HeaderContainer />
-				</div>
+				<HeaderContainer />
 				<ContentContainer />
-				<hr style={{clear: "both"}}/>
+				<hr style={{clear: "both", marginTop: 20, marginBottom: 30}}/>
 				<Footer />
 			</div>
 		);

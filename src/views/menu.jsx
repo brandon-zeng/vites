@@ -1,11 +1,12 @@
 import React from 'react';
-import ComponentStyle from '../styles/menu.less';
+import ComponentStyle from '../styles/header.less';
 
 class MenuComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
+
 
     onLinkClick(id) {
     	this.props.onClick(id);
@@ -18,9 +19,9 @@ class MenuComponent extends React.Component {
 				<table className={ComponentStyle['menuTable']}>
 					<tbody>
 						<tr>
-							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "1")}>Headphones</a></td>
-							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "2")}>Missions</a></td>
-							<td><a href="javascript:void(0)" onClick={this.onLinkClick.bind(this, "3")}>Contacts</a></td>
+							<td className={this.props.styleName}><a href="javascript:void(0);" onClick={this.onLinkClick.bind(this, "1")}>Headphones</a></td>
+							<td className={this.props.styleName}><a href="javascript:void(0);" onClick={this.onLinkClick.bind(this, "2")}>Missions</a></td>
+							<td className={this.props.styleName}><a href="javascript:void(0);" onClick={this.onLinkClick.bind(this, "3")}>Contacts</a></td>
 						</tr>
 					</tbody>
 				</table>

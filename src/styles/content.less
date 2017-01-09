@@ -6,10 +6,10 @@
     }
 
 	.contentBox {
-		height: 500px;
+		height: 800px;
 		width: 100%;
 		color: white;
-		background-image: url("/img/sport.jpg");
+		background-image: url("/img/phonelife.jpg");
 		background-size: cover;
     	background-repeat: no-repeat;
     	background-position: right;
@@ -29,7 +29,13 @@
 		float: left;
 		width: 33.3%;
 		padding: 20px 5px;
+		margin: auto;
 		box-sizing: border-box;
+
+		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+			width: 100%;
+			float: none;
+		}
 
 		.imgArea {
 			    display: block;
@@ -39,11 +45,12 @@
 		.textArea {
 			background-color: #ffffff;
 			padding: 0px 5px;
+			text-align: center;
 
 			h4 {
 				color: #00aec5;
-				text-align: center;
 			}
 		}
 	}
+
 }

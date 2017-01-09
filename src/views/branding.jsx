@@ -1,5 +1,5 @@
 import React from 'react';
-import ComponentStyle from '../styles/branding.less'
+import ComponentStyle from '../styles/header.less'
 
 class MenuComponent extends React.Component {
 	constructor(props) {
