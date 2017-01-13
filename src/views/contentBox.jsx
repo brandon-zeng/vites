@@ -53,6 +53,7 @@ class contentBox extends React.Component {
 			<div style={{paddingTop: 100}}>
 				<div className={containerClass}>
 					{/* {textDiv} */}
+					{/*<div className={ComponentStyle['textAreaMid']}> <h1>The only selfie headphone you need </h1></div>*/}
 				</div>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30 }}>
 					<div className={ComponentStyle['feature']}> 

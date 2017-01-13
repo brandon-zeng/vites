@@ -72,6 +72,7 @@
 		right: 10px;
 		background-color: @background-highlight;
 		color: white;
+		border-radius: 20px;
 
 		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
 			top: 30px;
@@ -82,11 +83,13 @@
 			font-size: 24px;
 			color: white;
 			line-height: 60px;
-			padding: 15px;
+			padding: 15px 30px;
+			border-radius: 20px;
 		}
 
 		:hover {
-			background-color: #00ae45;
+			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			background-color: lighten(@background-highlight, 2%);
 		}
 	}
 	.menuArea {
