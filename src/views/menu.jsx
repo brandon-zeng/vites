@@ -1,5 +1,6 @@
-import React from 'react';
-import ComponentStyle from '../styles/header.less';
+import React from 'react'
+import { Link } from 'react-router'
+import ComponentStyle from '../styles/header.less'
 
 class MenuComponent extends React.Component {
 	constructor(props) {
@@ -19,9 +20,9 @@ class MenuComponent extends React.Component {
 				<table className={ComponentStyle['menuTable']}>
 					<tbody>
 						<tr>
-							<td className={this.props.styleName}><a href="javascript:void(0);" onClick={this.onLinkClick.bind(this, "1")}>Headphones</a></td>
-							<td className={this.props.styleName}><a href="javascript:void(0);" onClick={this.onLinkClick.bind(this, "2")}>Missions</a></td>
-							<td className={this.props.styleName}><a href="javascript:void(0);" onClick={this.onLinkClick.bind(this, "3")}>Contacts</a></td>
+							<td className={this.props.styleName}><Link to="/products" activeStyle={{}}>Products</Link></td>
+							<td className={this.props.styleName}><Link to="/stories" activeStyle={{}}>Stories</Link></td>
+							<td className={this.props.styleName}><Link to="/contacts" activeStyle={{}}>Contacts</Link></td>
 						</tr>
 					</tbody>
 				</table>

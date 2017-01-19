@@ -9,7 +9,7 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 
-router.get('/', function(req, res, next) {
+router.get('/*', function(req, res, next) {
 	res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
 })
 

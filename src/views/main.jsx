@@ -15,7 +15,7 @@ class MainComponent extends React.Component {
 		return (
 			<div>
 				<HeaderContainer />
-				<ContentContainer />
+				{this.props.children}
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 30}}/>
 				<Footer />
 			</div>
