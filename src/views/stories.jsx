@@ -10,7 +10,7 @@ class StoriesComponent extends React.Component {
 	render() {
 		
 		return (
-			<div style={{paddingTop: 100}}>
+			<div style={{paddingTop: 100, minHeight: 200}}>
 				<div className={ComponentStyle['stories']}>
 					Stories are coming!
 				</div>

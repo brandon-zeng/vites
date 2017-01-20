@@ -10,7 +10,7 @@ class ContactsComponent extends React.Component {
 	render() {
 		
 		return (
-			<div style={{paddingTop: 100}}>
+			<div style={{paddingTop: 100, minHeight: 200}}>
 				<div className={ComponentStyle['contacts']}>
 					Contacts are coming!
 				</div>

@@ -20,7 +20,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
 const ContentContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  null,
+  {pure:false}
 )(contentBox)
 
 export default ContentContainer

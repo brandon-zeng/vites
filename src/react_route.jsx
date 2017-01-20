@@ -17,7 +17,6 @@ class ReactRouter extends React.Component {
 	logPageView() {
 		ReactGA.set({ page: window.location.pathname });
 		ReactGA.pageview(window.location.pathname);
-		console.log('log page view to google analytics');
 	}
 
 	render() {
