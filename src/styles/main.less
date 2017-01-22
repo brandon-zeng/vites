@@ -34,4 +34,53 @@
     	transition: color 125ms ease-in 0s;
     	text-transform: uppercase;
 	}
+	.feedbackbutton {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+
+		.imgArea {
+			position: relative;
+    		display: inline;
+
+		}
+
+		:hover {
+			bottom: 5px;
+			cursor: pointer;
+		}
+	}
+	.modelDialog {
+		position: fixed;
+		top: 200px;
+		left: 0px;
+		right: 0px;
+		margin: 0 auto;
+		display: block;
+		background-color: white;
+    	width: 300px;
+		opacity: 0.95;
+
+		.modelClose {
+			float: right;
+			clear: both;
+			margin-right: 10px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+
+		.modelInput {
+			width: 250px;
+		}
+
+		.modelSubmit {
+			height: 30px;
+			width: 100px; 
+			float: right;
+			background-color: rgb(104, 200, 49);
+			margin-top: 10px;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+	}
 }

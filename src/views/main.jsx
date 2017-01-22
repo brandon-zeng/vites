@@ -3,6 +3,7 @@ import HeaderContainer from '../containers/header_container.js'
 import ContentContainer from '../containers/content_container.js'
 import SimpleSlider from './imageSlider.jsx'
 import Footer from './footer.jsx'
+import Feedback from './floatFeedback.jsx'
 
 class MainComponent extends React.Component {
 
@@ -17,6 +18,7 @@ class MainComponent extends React.Component {
 				<HeaderContainer />
 				{this.props.children}
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 30}}/>
+				<Feedback />
 				<Footer />
 			</div>
 		);
