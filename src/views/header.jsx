@@ -32,7 +32,7 @@ class HeaderComponent extends React.Component {
 			<div className = {ComponentStyle['headerContainer']}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button onClick={this.onOpenIconClick.bind(this)}>&#9776;</button></div>
-				<div className={ComponentStyle['menuBuy']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">Buy it</ReactGA.OutboundLink></div>
+				<div className={ComponentStyle['menuBuy']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">Buy now</ReactGA.OutboundLink></div>
 				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick}/>
 			</div>
 		);

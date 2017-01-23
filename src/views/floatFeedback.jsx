@@ -22,6 +22,7 @@ class FeedbackComponent extends React.Component {
 					<img src={'/img/live_chat_offline.png'} alt={"feedback"} onClick={this.goggleModal.bind(this)} className={ComponentStyle['imgArea']}/> 
 				</div>
 				{this.state.modalActive && (
+					<div className={ComponentStyle['modelBackground']}> </div>
 					<div className={ComponentStyle['modelDialog']}>
 						<a title='Close' onClick={this.closeModal.bind(this)} className={ComponentStyle['modelClose']}>X</a>
 						<div className={ComponentStyle['modelContent']} >
