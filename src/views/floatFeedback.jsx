@@ -66,7 +66,7 @@ class FeedbackComponent extends React.Component {
 									<p>Your email: <span style={{color: "#FF0000"}}>*</span></p>
 									<input type='text' name='name' className={ComponentStyle['modelInput']} value={this.state.email} onChange={this.setValue.bind(this, 'email')}/>
 									<p>Your question: <span style={{color: "#FF0000"}}>*</span></p>
-									<textarea style={{width: 240, height: 200}} value={this.state.message} onChange={this.setValue.bind(this, 'message')}/>
+									<textarea className={ComponentStyle['modelTextarea']} value={this.state.message} onChange={this.setValue.bind(this, 'message')}/>
 									<div>
 										<input type='submit' value='Email us' className={ComponentStyle['modelSubmit']} />
 									</div>
