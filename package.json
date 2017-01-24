@@ -41,9 +41,9 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack",
-    "build-run": "webpack && node server.js",
-    "build-run-forever": "webpack && forever start server.js > stdout.txt 2 > stderr.txt &",
-    "build-run-forever-80": "webpack && forever start server80.js > stdout.txt 2 > stderr.txt &",
+    "auto-run": "webpack && node server.js",
+    "build-run": "webpack && forever start server.js > stdout.txt 2 > stderr.txt &",
+    "build-run-80": "webpack && forever start server80.js > stdout.txt 2 > stderr.txt &",
     "dev-server": "webpack-dev-server --content-base public/",
     "lint": "eslint src/**",
     "test": "node_modules/.bin/nyc --require babel-register node_modules/.bin/mocha ./src/**/test/*"
