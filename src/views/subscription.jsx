@@ -1,6 +1,7 @@
 import React from 'react';
 import * as allApi from '../api/root_api.js';
 import ComponentStyle from '../styles/footer.less';
+var cryptoer = require('../../server/cryptoer.js');
 
 class MenuComponent extends React.Component {
 	constructor(props) {
@@ -22,7 +23,9 @@ class MenuComponent extends React.Component {
 
 		console.log("got submit request");
 
-		this.state.email && allApi.subscribe(this.state.email)
+		var enc = cryptoer.encrypt(this.state.email);
+		console.log('data to send: ' + enc);
+		this.state.email && allApi.subscribe(enc)
 		.then(response => {
 			console.log(JSON.stringify(response.data));
 			this.setState({email: ''});

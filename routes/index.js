@@ -2,6 +2,7 @@ var path = require('path');
 var express = require('express');
 var dbb = require('../db/pgdb.js');
 var mailer = require('../server/mailer.js');
+var cryptoer = require('../server/cryptoer.js');
 var router = express.Router();
 
 // middleware that is specific to this router
@@ -38,8 +39,10 @@ router.post('/api/feedback', function(req, res, next) {
 });
 
 router.post('/api/subscribe', function(req, res, next) {
-	if (req.body && req.body.email) {
-		mailer.subscribe(req.body.email, res);
+	if (req.body) {
+		var dec = cryptoer.decrypt(req.body);
+		console.log('receive contain : ' + dec);
+		mailer.subscribe(dec.email, res);
 	} else {
 		res.send("error: data missing\n ")
 	}
