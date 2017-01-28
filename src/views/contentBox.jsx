@@ -53,19 +53,19 @@ class contentBox extends React.Component {
 			<div style={{paddingTop: 100}}>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
 					{/* {textDiv} */}
-					{/*<div className={ComponentStyle['textAreaMid']}> <h1>The only selfie headphone you need </h1></div>*/}
+					<div className={ComponentStyle['textArea']}>The ultimate bluetooth selfie headphone solves both your audio and selfie needs </div>
 				</div>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30, overflow: 'auto' }}>
 					<div className={ComponentStyle['feature']}> 
-						<img src={'/img/selfie-family.png'} alt={"family"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<img src={'/img/selfie-family.png'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
 						<div className={ComponentStyle['textArea']}> <h4>superior sound</h4> <p >the best sound quality in the world that exceeds your expectation</p></div> 
 					</div>
 					<div className={ComponentStyle['feature']}> 
-						<img src={'/img/selfie-group.jpg'} alt={"group"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} />
+						<img src={'/img/selfie-group.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} />
 						<div className={ComponentStyle['textArea']}> <h4>remote camera control</h4> <p>you can make a selfie in distance without a stick even when you are doing excercise</p></div>  
 					</div>
 					<div className={ComponentStyle['feature']}>
-						<img src={'/img/selfie-self.png'} alt={"selfie"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<img src={'/img/selfie-self.png'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
 						<div className={ComponentStyle['textArea']}> <h4>egonomic design</h4> <p>fits your ear well, it is designed to work out with you</p></div> 
 					</div>
 				</div>

@@ -17,11 +17,13 @@
         overflow: auto;
 
     	.textArea {
-            width: 80%;
-    		min-height: 300px;
-    		margin: 50px auto;
-            background-color: whitesmoke;
-            color: black;
+			font-size: 36px;
+			width: 650px;
+			position: absolute;
+			top: 200px;
+			right: 30px;
+			line-height: 150%;
+			text-align: right;
     	}
 
 		.textAreaMid {
@@ -38,19 +40,31 @@
 		box-sizing: border-box;
 
 		@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
-			width: 100%;
+			width: 80%;
 			float: none;
 		}
 
 		.imgArea {
 			    display: block;
     			margin: auto;
+				
+				&:hover {
+					transform: rotateY(360deg);
+					transition: 1s;
+				}
+
+				@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+					zoom: 2;
+				}
 		}
 
 		.textArea {
 			background-color: #ffffff;
 			padding: 0px 5px;
 			text-align: center;
+			@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+					zoom: 2;
+				}
 
 			h4 {
 				color: #00aec5;

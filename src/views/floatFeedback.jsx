@@ -8,7 +8,7 @@ class FeedbackComponent extends React.Component {
 		this.state = {modalActive: false, name: '', email: '', message: ''};
 	}
 
-	goggleModal () {
+	toggleModal () {
     	this.setState({ modalActive: !this.state.modalActive })
   	}
 
@@ -51,24 +51,24 @@ class FeedbackComponent extends React.Component {
 		return (
 			<div>
 				<div className={ComponentStyle['feedbackbutton']}> 
-					<img src={'/img/live_chat_offline.png'} alt={"feedback"} onClick={this.goggleModal.bind(this)} className={ComponentStyle['imgArea']}/> 
+					<img src={'/img/live_chat_offline.png'} alt={"feedback"} onClick={this.toggleModal.bind(this)} className={ComponentStyle['imgArea']}/> 
 				</div>
 				{this.state.modalActive && (
 					<div>
-						<div className={ComponentStyle['modelBackground']}> </div>
-						<form className={ComponentStyle['feedbackForm']} onSubmit={this.handleSubmit.bind(this)}>
-							<div className={ComponentStyle['modelDialog']}>
-								<a title='Close' onClick={this.closeModal.bind(this)} className={ComponentStyle['modelClose']}>X</a>
-								<div className={ComponentStyle['modelContent']} >
+						<div className={'modelBackground'}> </div>
+						<form className={'feedbackForm'} onSubmit={this.handleSubmit.bind(this)}>
+							<div className={'modelDialog'}>
+								<a title='Close' onClick={this.closeModal.bind(this)} className={'modelClose'}>X</a>
+								<div className={'modelContent'} >
 									<h4>Leave us a message and we will get back to you as soon as we can</h4>
 									<p>Your name: <span style={{color: "#FF0000"}}>*</span></p>
-									<input type='text' name='name' className={ComponentStyle['modelInput']} value={this.state.name} onChange={this.setValue.bind(this, 'name')}/>
+									<input type='text' name='name' className={'modelInput'} value={this.state.name} onChange={this.setValue.bind(this, 'name')}/>
 									<p>Your email: <span style={{color: "#FF0000"}}>*</span></p>
-									<input type='text' name='name' className={ComponentStyle['modelInput']} value={this.state.email} onChange={this.setValue.bind(this, 'email')}/>
+									<input type='text' name='name' className={'modelInput'} value={this.state.email} onChange={this.setValue.bind(this, 'email')}/>
 									<p>Your question: <span style={{color: "#FF0000"}}>*</span></p>
-									<textarea className={ComponentStyle['modelTextarea']} value={this.state.message} onChange={this.setValue.bind(this, 'message')}/>
+									<textarea className={'modelTextarea'} value={this.state.message} onChange={this.setValue.bind(this, 'message')}/>
 									<div>
-										<input type='submit' value='Email us' className={ComponentStyle['modelSubmit']} />
+										<input type='submit' value='Email us' className={'modelSubmit'} />
 									</div>
 								</div>
 							</div>
