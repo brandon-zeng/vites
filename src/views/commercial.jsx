@@ -23,7 +23,7 @@ class ContactsComponent extends React.Component {
 
 		return (
 			<div style={{paddingTop: 200, flex: 1}}>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/rAcaTxSMIho" frameborder="0" 
+				<iframe width="800" height="500" src="https://www.youtube.com/embed/rAcaTxSMIho" frameborder="0" 
 					allowfullscreen 
 					webkitAllowFullScreen 
 					mozallowfullscreen
