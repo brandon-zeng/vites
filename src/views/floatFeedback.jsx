@@ -58,17 +58,21 @@ class FeedbackComponent extends React.Component {
 						<div className={'modelBackground'}> </div>
 						<form className={'feedbackForm'} onSubmit={this.handleSubmit.bind(this)}>
 							<div className={'modelDialog'}>
-								<a title='Close' onClick={this.closeModal.bind(this)} className={'modelClose'}>X</a>
-								<div className={'modelContent'} >
-									<h4>Leave us a message and we will get back to you as soon as we can</h4>
-									<p>Your name: <span style={{color: "#FF0000"}}>*</span></p>
-									<input type='text' name='name' className={'modelInput'} value={this.state.name} onChange={this.setValue.bind(this, 'name')}/>
-									<p>Your email: <span style={{color: "#FF0000"}}>*</span></p>
-									<input type='text' name='name' className={'modelInput'} value={this.state.email} onChange={this.setValue.bind(this, 'email')}/>
-									<p>Your question: <span style={{color: "#FF0000"}}>*</span></p>
-									<textarea className={'modelTextarea'} value={this.state.message} onChange={this.setValue.bind(this, 'message')}/>
-									<div>
-										<input type='submit' value='Email us' className={'modelSubmit'} />
+								<div className="verLine"></div>
+								<div className="verLine2"></div>
+								<div className="innerBox">
+									<a title='Close' onClick={this.closeModal.bind(this)} className={'modelClose'}>X</a>
+									<div className={'modelContent'} >
+										<h4>Leave us a message and we will get back to you as soon as we can</h4>
+										<p>Your name: <span style={{color: "#FF0000"}}>*</span></p>
+										<input type='text' name='name' className={'modelInput'} value={this.state.name} onChange={this.setValue.bind(this, 'name')}/>
+										<p>Your email: <span style={{color: "#FF0000"}}>*</span></p>
+										<input type='text' name='name' className={'modelInput'} value={this.state.email} onChange={this.setValue.bind(this, 'email')}/>
+										<p>Your question: <span style={{color: "#FF0000"}}>*</span></p>
+										<textarea className={'modelTextarea'} value={this.state.message} onChange={this.setValue.bind(this, 'message')}/>
+										<div>
+											<input type='submit' value='Email us' className={'modelSubmit'} />
+										</div>
 									</div>
 								</div>
 							</div>

@@ -2,23 +2,97 @@
 @background: #ecebe8;
 
 @keyframes slide-in {
-	100% { left: 0px;}
+	from {top: 1200px}
+	to { top: 200px;}
+}
+
+@keyframes rotateMe {
+	100% {transform: rotate(0deg);}
+}
+
+@keyframes leftHang {
+	0% {left: 12px;}
+	100% {left: 7px;}
+}
+
+@keyframes pullIt {
+	0% {right: 138px; height: 0px;}
+	50% {right: 138px; height: 555px;}
+	60% {right: 75px; height: 450px;}
+	70% {right: 35px; height: 370px;}
+	80% {right: 20px; height: 300px;}
+	90% {right: 10px; height: 245px;}
+	100% {right: 7px; height: 215px;}
 }
 
 .modelDialog {
 	position: fixed;
 	top: 200px;
-	left: -1200px;
+	left: 0px;
 	right: 0px;
 	margin: 0 auto;
 	display: block;
-	background-color: white;
+	//background-color: white;
 	width: 500px;
 	opacity: 0.95;
 	z-index: 9999;
 
-	-webkit-animation: slide-in 2s forwards;
-	animation: slide-in 2s forwards;
+	-webkit-animation: slide-in 1s forwards 0s;
+	animation: slide-in 1s forwards 0s;
+
+	.verLine {
+		border: 2px solid #337ABE;
+		position: absolute;
+		top: -1222px;
+		left: 12px;
+		width: 0px;
+		height: 1230px;
+		z-index: 10000;
+
+		-webkit-animation: leftHang 1s forwards 2s;
+		animation: leftHang 1s forwards 2s;
+	}
+
+	.verLine2 {
+		border: 2px solid #337ABE;
+		position: absolute;
+		top: -208px;
+		//right: 7px;
+		width: 0px;
+		//height: 210px;
+		z-index: 10000;
+
+		-webkit-animation: pullIt 1s forwards 1s;
+		animation: pullIt 1s forwards 1s;
+		//animation-timing-function: ease-out;
+	}
+
+	.innerBox {
+		transform: rotate(45deg);
+		transform-origin: 3% 3%;
+		background-color: #fff;
+		overflow: auto;
+
+		-webkit-animation: rotateMe 0.5s forwards 1.5s;
+		animation: rotateMe 0.5s forwards 1.5s;
+		animation-timing-function: ease-out;
+
+		&:before {
+			content: "O";
+			position: absolute;
+			left: 3px;
+			top: 3px;
+			font-weight: bold;
+		}
+
+		&:after {
+			content: "O";
+			position: absolute;
+			right: 3px;
+			top: 3px;
+			font-weight: bold;
+		}
+	}
 
 	.modelClose {
 		float: right;
@@ -28,6 +102,10 @@
 		margin-bottom: 10px;
 		cursor: pointer;
 		font-size: 20px;
+
+		&:hover {
+			text-shadow: 2px 2px;
+		}
 	}
 
 	.modelContent {
