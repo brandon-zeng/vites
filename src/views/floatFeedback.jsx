@@ -5,12 +5,26 @@ import ComponentStyle from '../styles/main.less';
 class FeedbackComponent extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {modalActive: false, name: '', email: '', message: ''};
+		this.state = {modalActive: false, name: '', email: '', message: '', isCloing: false};
 	}
 
 	toggleModal () {
-    	this.setState({ modalActive: !this.state.modalActive })
+		if (this.state.modalActive === false) {
+			this.setModalState(this, true);
+		} else {
+			this.closingModal();
+		}
   	}
+
+	closingModal() {
+		//let {isClosing, ...oldState} = this.state;
+		this.setState({modalActive: true, isCloing: true});
+		setTimeout(this.setModalState, 1000, this, false);
+	}
+
+	setModalState(self, state) {
+		self.setState({ modalActive: state, name: '', email: '', message: '', isCloing: false})
+	}
 
 	closeModal () {
 		this.setState({ modalActive: false })
@@ -44,24 +58,26 @@ class FeedbackComponent extends React.Component {
 			console.log(error);
 		})
 
-		this.closeModal();
+		this.closingModal();
   }
 
-	render() {
+	render() {		
+		let modelDialogClass = this.state.isCloing ? "modelDialogClosing" : "modelDialog";
+
 		return (
 			<div>
 				<div className={ComponentStyle['feedbackbutton']}> 
 					<img src={'/img/live_chat_offline.png'} alt={"feedback"} onClick={this.toggleModal.bind(this)} className={ComponentStyle['imgArea']}/> 
 				</div>
-				{this.state.modalActive && (
+				{ this.state.modalActive && (
 					<div>
 						<div className={'modelBackground'}> </div>
 						<form className={'feedbackForm'} onSubmit={this.handleSubmit.bind(this)}>
-							<div className={'modelDialog'}>
+							<div className={modelDialogClass}>
 								<div className="verLine"></div>
 								<div className="verLine2"></div>
 								<div className="innerBox">
-									<a title='Close' onClick={this.closeModal.bind(this)} className={'modelClose'}>X</a>
+									<a title='Close' onClick={this.toggleModal.bind(this)} className={'modelClose'}>X</a>
 									<div className={'modelContent'} >
 										<h4>Leave us a message and we will get back to you as soon as we can</h4>
 										<p>Your name: <span style={{color: "#FF0000"}}>*</span></p>

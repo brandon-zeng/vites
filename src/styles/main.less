@@ -6,6 +6,11 @@
 	to { top: 200px;}
 }
 
+@keyframes slide-out {
+	from {top: 200px}
+	to { top: -600px;}
+}
+
 @keyframes rotateMe {
 	100% {transform: rotate(0deg);}
 }
@@ -25,7 +30,7 @@
 	100% {right: 7px; height: 215px;}
 }
 
-.modelDialog {
+.modelDialog-template(@animation) {
 	position: fixed;
 	top: 200px;
 	left: 0px;
@@ -37,8 +42,8 @@
 	opacity: 0.95;
 	z-index: 9999;
 
-	-webkit-animation: slide-in 1s forwards 0s;
-	animation: slide-in 1s forwards 0s;
+	-webkit-animation: @animation 1s forwards 0s;
+	animation: @animation 1s forwards 0s;
 
 	.verLine {
 		border: 2px solid #337ABE;
@@ -136,6 +141,14 @@
 		cursor: pointer;
 	}
 }
+
+	.modelDialog {
+		.modelDialog-template(slide-in);
+	}
+	
+	.modelDialogClosing{
+		.modelDialog-template(slide-out);
+	}
 
 .modelBackground {
 	width: 100%;
