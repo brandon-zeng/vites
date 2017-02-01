@@ -5,7 +5,11 @@ import ComponentStyle from '../styles/main.less';
 class FeedbackComponent extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {modalActive: false, name: '', email: '', message: '', isCloing: false};
+		this.state = this.initialState();
+	}
+
+	initialState() {
+		return {modalActive: false, name: '', email: '', message: '', isCloing: false, errorMessage: ''};
 	}
 
 	toggleModal () {
@@ -23,7 +27,12 @@ class FeedbackComponent extends React.Component {
 	}
 
 	setModalState(self, state) {
-		self.setState({ modalActive: state, name: '', email: '', message: '', isCloing: false})
+		self.setState({ modalActive: state, 
+						name: '', 
+						email: '', 
+						message: '', 
+						isCloing: false,
+						errorMessage: ''})
 	}
 
 	closeModal () {
@@ -33,7 +42,7 @@ class FeedbackComponent extends React.Component {
 	validateEmail (value) {
 		// regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
 		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(value);
+		return value ? re.test(value) : false;
   	}
 	
 	setValue(field, event) {
@@ -45,9 +54,19 @@ class FeedbackComponent extends React.Component {
 		this.setState(object);
   	}
 
+	displayError() {
+		this.setState({modalActive: true, name: '', email: '', message: '', isCloing: false, errorMessage: 'Please fill in all fields and a valid email!'})
+	}
+
 	handleSubmit(event) {
 		event.preventDefault();
 		console.log("form submitted");
+
+		if (!this.state.name || !this.state.message || !this.validateEmail(this.state.email)) {
+			console.log("data missing, feedback rejected: " + JSON.stringify(this.state));
+			this.displayError();
+			return;
+		}
 
 		this.state.name && allApi.submitFeedback(this.state.name, this.state.email, this.state.message)
 		.then(response => {
@@ -79,6 +98,7 @@ class FeedbackComponent extends React.Component {
 								<div className="innerBox">
 									<a title='Close' onClick={this.toggleModal.bind(this)} className={'modelClose'}>X</a>
 									<div className={'modelContent'} >
+										{ this.state.errorMessage && (<p className="errorMessage">{this.state.errorMessage} </p>)}
 										<h4>Leave us a message and we will get back to you as soon as we can</h4>
 										<p>Your name: <span style={{color: "#FF0000"}}>*</span></p>
 										<input type='text' name='name' className={'modelInput'} value={this.state.name} onChange={this.setValue.bind(this, 'name')}/>
