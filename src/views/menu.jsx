@@ -20,9 +20,10 @@ class MenuComponent extends React.Component {
 				<table className={ComponentStyle['menuTable']}>
 					<tbody>
 						<tr>
-							<td className={this.props.styleName}><Link to="/products" activeStyle={{color: 'black'}}>Products</Link></td>
-							<td className={this.props.styleName}><Link to="/stories" activeStyle={{color: 'black'}}>Stories</Link></td>
-							{/*<td className={this.props.styleName}><Link to="/contacts" activeStyle={{color: 'red'}}>Contacts</Link></td> */}
+							<td className={this.props.styleName}><Link to="/products" activeStyle={{boxShadow: '0px 1px 0px'}}>Products</Link></td>
+							<td className={this.props.styleName}><Link to="/stories" activeStyle={{boxShadow: '0px 1px 0px'}}>Stories</Link></td>
+							<td className={this.props.styleName}><Link to="/about" activeStyle={{boxShadow: '0px 1px 0px'}}>About us</Link></td>
+							
 						</tr>
 					</tbody>
 				</table>

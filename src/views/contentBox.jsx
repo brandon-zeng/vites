@@ -1,6 +1,7 @@
 import React from 'react'
 import ComponentStyle from '../styles/content.less'
 import SimpleSlider from './imageSlider.jsx'
+import SummaryComponent from './summary.jsx'
 
 class contentBox extends React.Component {
 
@@ -53,8 +54,11 @@ class contentBox extends React.Component {
 			<div style={{paddingTop: 100}}>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
 					{/* {textDiv} */}
-					<div className={ComponentStyle['textArea']}>The ultimate bluetooth selfie headphone solves both your audio and selfie needs </div>
+					<div className={ComponentStyle['textArea']}>The ultimate bluetooth selfie headphone fullfills both your audio and selfie needs </div>
 				</div>
+				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
+				<SummaryComponent />
+				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30, overflow: 'auto' }}>
 					<div className={ComponentStyle['feature']}> 
 						<img src={'/img/selfie-family.png'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
