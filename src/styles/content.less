@@ -8,11 +8,11 @@
 	.contentBox {
 		min-height: 800px;
 		width: 100%;
-		color: white;
-		background-image: url("/img/yoga-headphone.jpg");
+		color: dodgerblue;
+		background-image: url("/img/main.jpg");
 		background-size: cover;
     	background-repeat: no-repeat;
-    	background-position: center bottom;
+    	background-position: center top;
     	clear: both;
         overflow: auto;
 
@@ -20,7 +20,7 @@
 			font-size: 36px;
 			width: 650px;
 			position: absolute;
-			top: 200px;
+			top: 150px;
 			right: 30px;
 			line-height: 150%;
 			text-align: right;
@@ -72,7 +72,7 @@
 		}
 	}
 
-	.contacts {
+	.about {
 		position: relative;
 		margin: 0px auto;
 		width: 80%;
@@ -81,12 +81,12 @@
 	.stories {
 		position: relative;
 		margin: 0px auto;
-		width: 80%;
 
 		.item {
+			position: relative;
 			width: 100%;
-			clear: both;
-			margin: 20px auto;
+			height: 100vh;
+			margin: 0 auto;
 			overflow: auto;
 
 			.itemImg {
@@ -95,16 +95,81 @@
 				border-radius: 50%;
 			}
 
-			.itemText {
-				float: left;
-				width: 60%;
+			.text {
+				float: right;
+				width: 30%;
+				height: 100%;
 				font-size: 20px;
-				margin: 40px 80px;
+				position: relative;
+
+				.itemText {
+					position: relative;
+					width: 70%;
+					left: 50%;
+					top: 50%;
+					transform: translateX(-50%) translateY(-50%);
+    				-webkit-transform: translateX(-50%) translateY(-50%);
+				}
+			}
+			.itemImage1 {
+				position: relative;
+				background-image: url("/img/story1.jpg");
+				background-attachment: fixed;
+				background-size: auto 100%;
+				background-repeat: no-repeat;
+				background-position: top left;
+				float: left;
+				width: 70%;
+				height: 100%;
+			}
+			.itemImage2 {
+				position: relative;
+				background-image: url("/img/story2.jpg");
+				background-attachment: fixed;
+				background-size: auto 100%;
+				background-repeat: no-repeat;
+				background-position: top left;
+				float: left;
+				width: 70%;
+				height: 100%;
+			}
+			.itemImage3 {
+				position: relative;
+				background-image: url("/img/story3.jpg");
+				background-attachment: fixed;
+				background-size: auto 100%;
+				background-repeat: no-repeat;
+				background-position: top left;
+				float: left;
+				width: 70%;
+				height: 100%;
+			}
+			.itemImage4 {
+				position: relative;
+				background-image: url("/img/story4.jpg");
+				background-attachment: fixed;
+				background-size: auto 100%;
+				background-repeat: no-repeat;
+				background-position: top left;
+				float: left;
+				width: 70%;
+				height: 100%;
 			}
 		}
 	}
 }
 
+	.storyBlock(@image) {
+		position: relative;
+		background-image: url(@image);
+		background-attachment: fixed;
+		background-size: 50% auto;
+		background-repeat: no-repeat;
+		background-position: top right;
+		float: right;
+		width: 50%;
+		height: 100%;
+	}
 
 	.summaryContainer {
 		position: relative;
@@ -139,7 +204,7 @@
 			img:nth-of-type(1) {
 			left: 50px;
 			top: 50px;
-			width: 15%;
+			width: 18%;
 			-webkit-transform: rotate(5deg);
 			-moz-transform: rotate(5deg);
 			-o-transform: rotate(5deg);
@@ -149,19 +214,19 @@
 			img:nth-of-type(2) {
 				left: 150px;
 				top: 100px;
-				-webkit-transform: rotate(-10deg);
-				-moz-transform: rotate(-10deg);
-				-o-transform: rotate(-10deg);
-				transform: rotate(-10deg);
+				-webkit-transform: rotate(-12deg);
+				-moz-transform: rotate(-12deg);
+				-o-transform: rotate(-12deg);
+				transform: rotate(-12deg);
 			}
 			
 			img:nth-of-type(3) {
 				left: 270px;
 				top: 50px;
-				-webkit-transform: rotate(7deg);
-				-moz-transform: rotate(7deg);
-				-o-transform: rotate(7deg);
-				transform: rotate(7deg);
+				-webkit-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				-o-transform: rotate(15deg);
+				transform: rotate(15deg);
 			}
 			
 			img:nth-of-type(4) {
@@ -184,11 +249,18 @@
 
 						
 			img:hover {
-				-webkit-transform: rotate(370deg) scale(1.5);
-				-moz-transform: rotate(370deg) scale(1.5);
-				-o-transform: rotate(370deg) scale(1.5);
-				transform: rotate(370deg) scale(1.5);
+				-webkit-transform: scale(1.5) rotate(10deg);
+				-moz-transform: scale(1.5) rotate(10deg);
+				-o-transform: scale(1.5) rotate(10deg);
+				transform: scale(1.5) rotate(10deg);
 				z-index: 10;
+
+				@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
+					-webkit-transform: rotate(370deg) scale(2);
+					-moz-transform: rotate(370deg) scale(2);
+					-o-transform: rotate(370deg) scale(2);
+					transform: rotate(370deg) scale(2);
+				}
 			}
 		}
 
