@@ -51,7 +51,7 @@ class contentBox extends React.Component {
 		}
 
 		return (
-			<div style={{paddingTop: 100}}>
+			<div style={{paddingTop: 80}}>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
 					{/* {textDiv} */}
 					<div className={ComponentStyle['textArea']}>The ultimate bluetooth selfie headphone fullfills both your audio and selfie needs </div>
