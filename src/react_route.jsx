@@ -5,7 +5,9 @@ import { Router, Route, Link, browserHistory, IndexRedirect } from 'react-router
 import MainComponent from './views/main.jsx'
 import ContentContainer from './containers/content_container.js'
 import Stories from './views/stories.jsx'
+import Specs from './views/specs.jsx'
 import About from './views/about.jsx'
+import Blogs from './views/blogs.jsx'
 import Commercial from './views/commercial.jsx'
 
 class ReactRouter extends React.Component {
@@ -27,7 +29,9 @@ class ReactRouter extends React.Component {
 					<IndexRedirect to="/products" />
 					<Route path="products" component={ContentContainer} />
 					<Route path="stories" component={Stories} />
+					<Route path="specs" component={Specs} />
 					<Route path="about" component={About} />
+					<Route path="blogs" component={Blogs} />
 					<Route path="commercial" component={Commercial} />
 		    </Route>
 		  </Router>

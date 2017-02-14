@@ -17,7 +17,7 @@
         overflow: auto;
 
     	.textArea {
-			font-size: 36px;
+			font-size: 24px;
 			width: 650px;
 			position: absolute;
 			top: 150px;
@@ -34,7 +34,7 @@
 
 	.feature {
 		float: left;
-		width: 33.3%;
+		width: 20%;
 		padding: 20px 5px;
 		margin: auto;
 		box-sizing: border-box;
@@ -47,6 +47,9 @@
 		.imgArea {
 			    display: block;
     			margin: auto;
+				width: 18vw;
+				height: 18vw;
+				border-radius: 50%;
 				
 				&:hover {
 					transform: rotateY(360deg);
@@ -157,6 +160,10 @@
 			}
 		}
 	}
+
+	.specsContainer {
+		line-height: 200%;
+	}
 }
 
 	.storyBlock(@image) {
@@ -265,8 +272,9 @@
 		}
 
 		.summary {
+			width: 40%;
 			float: right;
-			font-size: 30px;
+			font-size: 24px;
 			line-height: 250%;
 			margin-top: 50px;
 		}

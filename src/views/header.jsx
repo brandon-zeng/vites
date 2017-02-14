@@ -33,6 +33,11 @@ class HeaderComponent extends React.Component {
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button onClick={this.onOpenIconClick.bind(this)}>&#9776;</button></div>
 				<div className={ComponentStyle['menuBuy']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">Buy now</ReactGA.OutboundLink></div>
+				{/*<div className={ComponentStyle['amazonImg']}>
+					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">
+						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />
+					</ReactGA.OutboundLink>
+				</div>*/}
 				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick}/>
 			</div>
 		);

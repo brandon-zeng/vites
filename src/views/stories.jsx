@@ -20,10 +20,10 @@ class StoriesComponent extends React.Component {
 						</div>
 					</div>
 					<div className={ComponentStyle['item']}> 
-						{/* <img src={'/img/yoga.jpg'} alt={"family"}  className={ComponentStyle['itemImg']} title={"bluetooth selfie headphone"} /> */}		
-						<div className={ComponentStyle['itemImage2']}> </div>				
+						{/* <img src={'/img/yoga.jpg'} alt={"family"}  className={ComponentStyle['itemImg']} title={"bluetooth selfie headphone"} /> */}			
+						<div className={ComponentStyle['itemImage4']}> </div>			
 						<div className={ComponentStyle['text']}>
-							<div className={ComponentStyle['itemText']}> Exploring the world solo? Now you have a personal photographer</div> 
+							<div className={ComponentStyle['itemText']}> No more awkward selfies with extruding arms, bathroom mirrors or unnatural angle. It is so good it doesn’t look like a selfie! Need selfie bursts? Place your phone, open the camera app and click away! Want to use the back camera for higher quality selfies? Now you can easily set it up and snap away!</div> 
 						</div>
 					</div>
 					<div className={ComponentStyle['item']}> 
@@ -34,10 +34,10 @@ class StoriesComponent extends React.Component {
 						</div>
 					</div>
 					<div className={ComponentStyle['item']}> 
-						{/* <img src={'/img/yoga.jpg'} alt={"family"}  className={ComponentStyle['itemImg']} title={"bluetooth selfie headphone"} /> */}			
-						<div className={ComponentStyle['itemImage4']}> </div>			
+						{/* <img src={'/img/yoga.jpg'} alt={"family"}  className={ComponentStyle['itemImg']} title={"bluetooth selfie headphone"} /> */}		
+						<div className={ComponentStyle['itemImage2']}> </div>				
 						<div className={ComponentStyle['text']}>
-							<div className={ComponentStyle['itemText']}> No more awkward selfies with extruding arms, bathroom mirrors or unnatural angle.<br />Need 20 different poses? You can now do it in one setup</div> 
+							<div className={ComponentStyle['itemText']}> Exploring the world solo? Now you have a personal photographer</div> 
 						</div>
 					</div>
 				</div>

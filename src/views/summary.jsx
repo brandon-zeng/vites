@@ -13,15 +13,15 @@ class SummaryComponent extends React.Component {
 			<div className={'summaryContainer'}>
 				<div className={'photos'}> 
 					<img src={'/img/viteread.jpg'} alt={"read in music"}  title={"bluetooth selfie headphone"} /> 
-					<img src={'/img/yoga_edited.jpg'} alt={"yoga selfie"}  title={"bluetooth selfie headphone"} /> 		
+					<img src={'/img/story4.jpg'} alt={"yoga selfie"}  title={"bluetooth selfie headphone"} /> 		
 					<img src={'/img/headphone.jpg'} alt={"bluetooth phone"}  title={"bluetooth selfie headphone"} /> 
 					<img src={'/img/phonejump.jpg'} alt={"timing selfie"}  title={"bluetooth selfie headphone"} /> 			
 				</div>
 				<div className={'summary'}> 
+					<h3>Connect Vite Origin to your smartphones via Bluetooth for :</h3>
 					<ul className={'itemText'}> 
-						<li>Sleek design</li>
-						<li>Bring high quality music with you everywhere</li>
-						<li>Capture precious moments at ease </li>
+						<li>Untangled, wireless listening</li>
+						<li>Remote photo taking via Airsnap technology. Secure your phone, step away, and snap!</li>
 					</ul> 
 				</div>
 			</div>

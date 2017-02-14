@@ -54,23 +54,35 @@ class contentBox extends React.Component {
 			<div style={{paddingTop: 80}}>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
 					{/* {textDiv} */}
-					<div className={ComponentStyle['textArea']}>The ultimate bluetooth selfie headphone fullfills both your audio and selfie needs </div>
+					<div className={ComponentStyle['textArea']}>
+						<h3>It’s finally here: the selfie earbuds</h3>
+						<p>Vite origin is a personal concierge for all your workout needs – wireless music listening and selfie assistance – in one tiny package </p>
+						<h3>$49 with free shipping in the U.S.</h3>
+					</div>
 				</div>
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<SummaryComponent />
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30, overflow: 'auto' }}>
 					<div className={ComponentStyle['feature']}> 
-						<img src={'/img/selfie-family.png'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
-						<div className={ComponentStyle['textArea']}> <h4>superior sound</h4> <p >the best sound quality in the world that exceeds your expectation</p></div> 
+						<img src={'/img/yoga_edited.png'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<div className={ComponentStyle['textArea']}> <h4></h4> <p >Videotape your workouts</p></div> 
 					</div>
 					<div className={ComponentStyle['feature']}> 
-						<img src={'/img/selfie-group.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} />
-						<div className={ComponentStyle['textArea']}> <h4>remote camera control</h4> <p>you can make a selfie in distance without a stick even when you are doing excercise</p></div>  
+						<img src={'/img/beauty-mid.jpeg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<div className={ComponentStyle['textArea']}> <h4></h4> <p >Take natural looking photos with elegance.</p></div> 
 					</div>
-					<div className={ComponentStyle['feature']}>
-						<img src={'/img/selfie-self.png'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
-						<div className={ComponentStyle['textArea']}> <h4>egonomic design</h4> <p>fits your ear well, it is designed to work out with you</p></div> 
+					<div className={ComponentStyle['feature']}> 
+						<img src={'/img/pod-mid.jpeg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<div className={ComponentStyle['textArea']}> <h4></h4> <p >Good music, free from wires</p></div> 
+					</div>
+					<div className={ComponentStyle['feature']}> 
+						<img src={'/img/landscape-mid.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<div className={ComponentStyle['textArea']}> <h4></h4> <p >Perfect timing at your fingertips</p></div> 
+					</div>
+					<div className={ComponentStyle['feature']}> 
+						<img src={'/img/facebook-mid.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['imgArea']} title={"bluetooth selfie headphone"} /> 
+						<div className={ComponentStyle['textArea']}> <h4></h4> <p >Works with your favorite social and native camera apps</p></div> 
 					</div>
 				</div>
 			</div>
