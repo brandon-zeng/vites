@@ -4,6 +4,7 @@ import ReactGA from 'react-ga'
 import { Router, Route, Link, browserHistory, IndexRedirect } from 'react-router'
 import MainComponent from './views/main.jsx'
 import ContentContainer from './containers/content_container.js'
+import ContentContainerB from './containers/content_containerB.js'
 import Stories from './views/stories.jsx'
 import Specs from './views/specs.jsx'
 import About from './views/about.jsx'
@@ -28,6 +29,7 @@ class ReactRouter extends React.Component {
 		    <Route path="/" component={MainComponent}>
 					<IndexRedirect to="/products" />
 					<Route path="products" component={ContentContainer} />
+					<Route path="productsB" component={ContentContainerB} />
 					<Route path="stories" component={Stories} />
 					<Route path="specs" component={Specs} />
 					<Route path="about" component={About} />

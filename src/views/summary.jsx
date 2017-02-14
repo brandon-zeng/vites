@@ -8,14 +8,17 @@ class SummaryComponent extends React.Component {
 	}
 
 	render() {
+		let theClassName = this.props.isOrdered ? 'summaryContainerOrdered' : 'summaryContainer';
 		
 		return (
-			<div className={'summaryContainer'}>
-				<div className={'photos'}> 
-					<img src={'/img/viteread.jpg'} alt={"read in music"}  title={"bluetooth selfie headphone"} /> 
-					<img src={'/img/story4.jpg'} alt={"yoga selfie"}  title={"bluetooth selfie headphone"} /> 		
-					<img src={'/img/headphone.jpg'} alt={"bluetooth phone"}  title={"bluetooth selfie headphone"} /> 
-					<img src={'/img/phonejump.jpg'} alt={"timing selfie"}  title={"bluetooth selfie headphone"} /> 			
+			<div className={theClassName}>
+				<div className={'photos'}>
+					<img src={'/img/story4.jpg'} alt={"yoga selfie"}  title={"bluetooth selfie headphone"} /> 	
+					{this.props.isOrdered ? <img src={'/img/headphone.jpg'} alt={"bluetooth phone"}  title={"bluetooth selfie headphone"} /> : ''}
+					{this.props.isOrdered ? <br style={{clear: "all"}} /> : ''}	
+					<img src={'/img/headphone2.jpg'} alt={"timing selfie"}  title={"bluetooth selfie headphone"} /> 
+					<img src={'/img/headphone3.jpg'} alt={"timing selfie"}  title={"bluetooth selfie headphone"} />
+					<img src={'/img/viteread.jpg'} alt={"read in music"}  title={"bluetooth selfie headphone"} /> 				
 				</div>
 				<div className={'summary'}> 
 					<h3>Connect Vite Origin to your smartphones via Bluetooth for :</h3>

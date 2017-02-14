@@ -61,7 +61,7 @@ class contentBox extends React.Component {
 					</div>
 				</div>
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
-				<SummaryComponent />
+				<SummaryComponent isOrdered={true} />
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30, overflow: 'auto' }}>
 					<div className={ComponentStyle['feature']}> 
