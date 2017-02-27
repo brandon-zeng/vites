@@ -14,7 +14,7 @@ class MainComponent extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{maxWidth: 1600, margin: "auto"}}>
 				<HeaderContainer />
 				{this.props.children}
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 30}}/>
