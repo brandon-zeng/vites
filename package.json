@@ -42,7 +42,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack",
-    "auto-run": "webpack && node server.js",
+    "auto-run": "webpack --progress && node server.js",
     "build-run": "webpack && forever start server.js > stdout.txt 2 > stderr.txt &",
     "build-run-80": "webpack && forever start server80.js > stdout.txt 2 > stderr.txt &",
     "dev-server": "webpack-dev-server --content-base public/",

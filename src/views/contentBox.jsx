@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactGA from 'react-ga'
 import ComponentStyle from '../styles/content.less'
 import SimpleSlider from './imageSlider.jsx'
 import SummaryComponent from './summary.jsx'
@@ -51,12 +52,12 @@ class contentBox extends React.Component {
 		}
 
 		return (
-			<div style={{paddingTop: 80}}>
+			<div>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
 					{/* {textDiv} */}
 					<div className={ComponentStyle['textArea']}>
-						<h3>It’s finally here: the selfie earbuds</h3>
-						<p>Vite origin is a personal concierge for all your workout needs – wireless music listening and selfie assistance – in one tiny package </p>
+						<h2>It’s finally here: the selfie earbuds</h2>
+						{/*<p>Vite origin is a personal concierge for all your workout needs – wireless music listening and selfie assistance – in one tiny package </p>*/}
 						<h3>$49 with free shipping in the U.S.</h3>
 					</div>
 				</div>

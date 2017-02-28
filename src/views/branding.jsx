@@ -12,7 +12,7 @@ class MenuComponent extends React.Component {
 		return (
 			<div className={ComponentStyle['brandArea']}>
 				<Link to="/products" className={ComponentStyle['anchor']}>
-					<img src="/img/logo-colored-big.jpg" alt="Vite Origin" title="Vite Store headphone"/>
+					<img src="/img/logo-vite.png" alt="Vite Origin" title="Vite Store headphone"/>
 					{/* <span style={{color: "blue"}}>vi</span><span style={{color: "red"}}>te</span> */}
 				</Link>
 			</div>
