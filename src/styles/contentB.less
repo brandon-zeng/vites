@@ -9,23 +9,64 @@
 		min-height: 800px;
 		width: 100%;
 		color: black;
-		background-image: url("/img/main-phone.jpg");
-		background-size: 100%;
-    	background-repeat: no-repeat;
-    	background-position: center top;
+		// background-image: url("/img/main-phone.jpg");
+		// background-size: 60%;
+    	// background-repeat: no-repeat;
+    	// background-position: center top;
     	clear: both;
         overflow: auto;
 		background-color: #fafcf9;
 
     	.textArea {
-			font-size: 24px;
-			width: 650px;
-			margin-top: 100px;
-    		margin-right: 50px;
-			float: right;
-			line-height: 150%;
-			text-align: right;
+			font-family: "Fjalla One", "HelveticaNeue", "Helvetica Neue", sans-serif;
+			width: 800px;
+			position: absolute;
+			top: 250px;
+			left: 150px;
+
+			p {
+				font-weight: 700;
+    			text-transform: uppercase;
+				font-size: 65px;
+				margin: 10px 0;
+    			line-height: 66px;
+			}
+
+			.buyNow {
+				border: 3px solid black;
+				border-radius: 50%;
+				font-size: 24px;
+				width: 80px;
+				height: 80px;
+
+				display: table;
+    			table-layout: fixed;
+
+				span {
+					display: table-cell;
+    				vertical-align: middle;
+					font-weight: 700;
+					text-transform: uppercase;
+					padding: 0px 14px;
+				}
+
+				&:hover {
+					color: #6e726a;
+					border-color: #6e726a;
+				}
+			}
+
+			.price {
+				color: #44f7b5;
+			}
     	}
+
+		.mainImg {
+			width: 1024px;
+			margin-top: 200px;
+			margin-right: -200px;
+			float: right;
+		}
 
 		.textAreaMid {
 			display: block;
@@ -107,6 +148,8 @@
 				position: relative;
 
 				.itemText {
+					font-family: "Fjalla One", "HelveticaNeue", "Helvetica Neue", sans-serif;
+					font-weight: 700;
 					position: relative;
 					width: 70%;
 					left: 50%;

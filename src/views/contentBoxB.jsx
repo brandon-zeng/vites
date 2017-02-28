@@ -1,5 +1,5 @@
 import React from 'react'
-import ComponentStyle from '../styles/content.less'
+import ComponentStyle from '../styles/contentB.less'
 import SimpleSlider from './imageSlider.jsx'
 import SummaryComponent from './summary.jsx'
 
@@ -51,14 +51,16 @@ class contentBox extends React.Component {
 		}
 
 		return (
-			<div style={{paddingTop: 80}}>
+			<div>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
 					{/* {textDiv} */}
 					<div className={ComponentStyle['textArea']}>
-						<h3>It’s finally here: the selfie earbuds</h3>
-						<p>Vite origin is a personal concierge for all your workout needs – wireless music listening and selfie assistance – in one tiny package </p>
-						<h3>$49 with free shipping in the U.S.</h3>
+						<p>It’s finally here: </p>
+						<p>the selfie earbuds </p>
+						<p className={ComponentStyle['price']}>$49.9</p>
+						<div className={ComponentStyle['buyNow']}><span>buy<br/>now</span></div>
 					</div>
+					<img src={'/img/main-phone.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['mainImg']} title={"bluetooth selfie headphone"} /> 
 				</div>
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<SummaryComponent isOrdered={true} />
