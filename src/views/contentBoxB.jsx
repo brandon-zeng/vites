@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactGA from 'react-ga'
 import ComponentStyle from '../styles/contentB.less'
 import SimpleSlider from './imageSlider.jsx'
 import SummaryComponent from './summary.jsx'
@@ -58,7 +59,7 @@ class contentBox extends React.Component {
 						<p>It’s finally here: </p>
 						<p>the selfie earbuds </p>
 						<p className={ComponentStyle['price']}>$49.9</p>
-						<div className={ComponentStyle['buyNow']}><span>buy<br/>now</span></div>
+						<div className={ComponentStyle['buyNow']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><span>buy<br/>now</span></ReactGA.OutboundLink></div>
 					</div>
 					<img src={'/img/main-phone.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['mainImg']} title={"bluetooth selfie headphone"} /> 
 				</div>

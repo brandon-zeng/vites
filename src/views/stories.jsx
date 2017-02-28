@@ -10,7 +10,7 @@ class StoriesComponent extends React.Component {
 	render() {
 		
 		return (
-			<div style={{paddingTop: 100, minHeight: 200}}>
+			<div style={{minHeight: 200}}>
 				<div className={ComponentStyle['stories']}>
 					<div className={ComponentStyle['item']}> 
 						{/* <img src={'/img/selfie-family.png'} alt={"family"}  className={ComponentStyle['itemImg']} title={"bluetooth selfie headphone"} /> */}		

@@ -10,7 +10,7 @@ class blogsComponent extends React.Component {
 	render() {
 		
 		return (
-			<div style={{paddingTop: 150, minHeight: 200}}>
+			<div style={{minHeight: 200}}>
 				<div className={ComponentStyle['blogs']}>
 					It is coming soon!
 				</div>

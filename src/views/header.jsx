@@ -8,7 +8,7 @@ class HeaderComponent extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {opened: false};
+		this.state = {opened: false, containerClass: ComponentStyle['headerContainer']};
 	};
 
 	onOpenIconClick() {
@@ -27,9 +27,29 @@ class HeaderComponent extends React.Component {
 		}
 	}
 
+	handleScroll(event) {
+        // Do something generic, if you have to
+        console.log("ScrollWrapper's handleScroll: " + document.body.scrollTop);
+
+        // Call the passed-in prop
+        if (document.body.scrollTop > 780 || document.documentElement.scrollTop > 780) {
+			this.setState({opened: this.state.opened, containerClass: ComponentStyle['headerContainerWhite']})
+		} else {
+			this.setState({opened: this.state.opened, containerClass: ComponentStyle['headerContainer']})
+		}
+    }
+
+	componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll.bind(this));
+    }
+
 	render() {
 		return (
-			<div className = {ComponentStyle['headerContainer']}>
+			<div className = {this.state.containerClass}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button onClick={this.onOpenIconClick.bind(this)}>&#9776;</button></div>
 				<div className={ComponentStyle['menuBuy']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">Buy now</ReactGA.OutboundLink></div>
@@ -38,7 +58,7 @@ class HeaderComponent extends React.Component {
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />
 					</ReactGA.OutboundLink>
 				</div>*/}
-				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick}/>
+				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick} hideMenu={this.onOpenIconClick.bind(this)}/>
 			</div>
 		);
 	}
