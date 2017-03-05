@@ -62,7 +62,10 @@ class contentBox extends React.Component {
 						<p className={ComponentStyle['price']}>$49.9</p>
 						<div className={ComponentStyle['buyNow']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><span>buy<br/>now</span></ReactGA.OutboundLink></div>
 					</div>
-					<img src={'/img/main-phone.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['mainImg']} title={"bluetooth selfie headphone"} /> 
+					<div className={ComponentStyle['imgBox']}>
+						<div className={ComponentStyle['imgMarginBox']}> </div>
+						<img src={'/img/main-phone-square.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['mainImg']} title={"bluetooth selfie headphone"} /> 
+					</div>
 				</div>
 				<Stories />
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
