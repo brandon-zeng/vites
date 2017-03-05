@@ -3,67 +3,48 @@
 
 :local {
 	.subscription {
-		background: white;
-		padding: 5px 30px;
 		box-sizing: border-box;
+		overflow: auto;
 
-		.subCap {
-			display: inline-block;
-			color: white;
-
-			@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
-				display: block;
-			}
+		input[type="email"] {
+			height: 25px;
+			width: 60%;
 		}
 
-		.subInputArea {
-			display: inline-block;
-			margin-left: 150px;
-
-			@media screen and (max-width:900px) {
-				margin-left: 10px;
-			}
-
-			@media screen and (max-width:720px), screen and (max-device-width: 1080px) {
-				display: block;
-				margin-left: 0px;
-			}
-
-			input[type="email"] {
-				height: 25px;
-				width: 250px;
-			}
-
-			input[type="submit"]{
-				height: 35px;
-				background-color: black;
-				color: white;
-				margin-left: 10px;
-				padding: 6px 20px;
-    			border-radius: 5px;
-			}
-
+		input[type="submit"]{
+			height: 35px;
+			background-color: black;
+			color: white;
+			margin-left: 10px;
+			padding: 6px 20px;
+			border-radius: 5px;
 		}
 	}	
 
 	.footerContent {
+    width: 100%;
 	clear: both;
-	border-top: 5px #00aec5;
-	background: #404040;
-	color: #e7e7e7;
-	margin-top: 50px;
+	background: #edf2ef;
+	color: black;
 
 	.container {
 		margin: 5px 30px;
 	 	font-size: 14px;
 	}
 
-	.footer-copyright {
-		margin-top: 30px;
+	.footer-links {
+		.footer-section {
+			display: inline-block;
+			min-width: 200px;
+			width: 25%;
+			padding: 5px 20px;
+			box-sizing: border-box;
+			vertical-align: top;
+		}
 
 		a {
 			text-decoration: none;
-			color: #e7e7e7;
+			color: black;
 			cursor: auto;
 		}
 	}

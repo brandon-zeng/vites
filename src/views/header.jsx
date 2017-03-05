@@ -29,7 +29,7 @@ class HeaderComponent extends React.Component {
 
 	handleScroll(event) {
         // Do something generic, if you have to
-        console.log("ScrollWrapper's handleScroll: " + document.body.scrollTop);
+        // console.log("ScrollWrapper's handleScroll: " + document.body.scrollTop);
 
         // Call the passed-in prop
         if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {

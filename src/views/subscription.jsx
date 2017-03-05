@@ -36,16 +36,10 @@ class MenuComponent extends React.Component {
 	render() {
 		return (
 			<div className={ComponentStyle['subscription']}>
-				{/*<div className={ComponentStyle['subCap']}>
-					<h2>Subscribe to our newsletters </h2>
-					<p>for updates and promotions </p>
-				</div>*/}
-				<div className={ComponentStyle['subInputArea']}>
 					<form onSubmit={this.handleSubmit.bind(this)}>
 						<input type="email" placeholder="you@example.com" value={this.state.email} onChange={this.setValue.bind(this, 'email')}/>
 						<input type="submit" value="Subscribe" /> 
 					</form>
-				</div>
 			</div>
 		);
 	}
