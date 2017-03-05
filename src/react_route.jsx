@@ -33,7 +33,7 @@ class ReactRouter extends React.Component {
 					<Route path="stories" component={Stories} />
 					<Route path="specs" component={Specs} />
 					<Route path="about" component={About} />
-					<Route path="blogs" component={Blogs} />
+					{/*<Route path="blogs" component={Blogs} />*/}
 					<Route path="commercial" component={Commercial} />
 		    </Route>
 		  </Router>

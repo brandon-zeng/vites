@@ -32,7 +32,7 @@ class HeaderComponent extends React.Component {
         console.log("ScrollWrapper's handleScroll: " + document.body.scrollTop);
 
         // Call the passed-in prop
-        if (document.body.scrollTop > 780 || document.documentElement.scrollTop > 780) {
+        if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
 			this.setState({opened: this.state.opened, containerClass: ComponentStyle['headerContainerWhite']})
 		} else {
 			this.setState({opened: this.state.opened, containerClass: ComponentStyle['headerContainer']})
