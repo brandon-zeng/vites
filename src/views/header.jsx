@@ -13,9 +13,15 @@ class HeaderComponent extends React.Component {
 
 	onOpenIconClick() {
 		if (this.state.opened === false) {
-			this.setState({opened: true});
+			this.setState({opened: true, contianerClass: this.state.containerClass});
 		} else {
-			this.setState({opened: false});
+			this.setState({opened: false, contianerClass: this.state.containerClass});
+		}
+	}
+
+	closeMenu() {
+		if (this.state.opened === true) {
+			this.setState({opened: false, contianerClass: this.state.containerClass});
 		}
 	}
 
@@ -49,10 +55,10 @@ class HeaderComponent extends React.Component {
 
 	render() {
 		return (
-			<div className = {this.state.containerClass}>
+			<div className = {this.state.containerClass} onBlur={this.closeMenu.bind(this)}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button onClick={this.onOpenIconClick.bind(this)}>&#9776;</button></div>
-				<div className={ComponentStyle['menuBuy']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">Buy now</ReactGA.OutboundLink></div>
+				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><div className={ComponentStyle['menuBuy']}></div></ReactGA.OutboundLink>
 				{/*<div className={ComponentStyle['amazonImg']}>
 					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />

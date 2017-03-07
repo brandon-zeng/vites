@@ -36,7 +36,7 @@ class MenuComponent extends React.Component {
 								<div>F W P I</div>
 							</div>
 						</div>
-						<div> © 2016 vite originⓇ – ALL RIGHTS RESERVED - ALL TRADEMARKS ARE THE PROPERTY OF Vite Studio Inc. </div>
+						<div className={ComponentStyle['footer-copyright']}> © 2016 vite originⓇ – ALL RIGHTS RESERVED - ALL TRADEMARKS ARE THE PROPERTY OF Vite Studio Inc. </div>
 					</div>
 				</div>
 			</div>

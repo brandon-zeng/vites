@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactGA from 'react-ga'
-import ComponentStyle from '../styles/contentB.less'
+import ComponentStyle from '../styles/content.less'
 import SimpleSlider from './imageSlider.jsx'
 import SummaryComponent from './summary.jsx'
 
