@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { Link } from 'react-router'
 import ComponentStyle from '../styles/header.less'
 
@@ -16,14 +17,28 @@ class MenuComponent extends React.Component {
 		}
     }
 
-	componentDidMount() {
-        this.setState({hideMenu: this.props.hideMenu})
-    }
+	componentDidMount () {
+		this.setState({hideMenu: this.props.hideMenu})
+		window.__myapp_container.addEventListener('click', this.handleDocumentClick.bind(this))
+	}
+
+	componentWillUnmount () {
+		window.__myapp_container.removeEventListener('click', this.handleDocumentClick.bind(this))
+	}
+
+	/* using fat arrow to bind to instance */
+	handleDocumentClick(evt) {
+		const area = ReactDOM.findDOMNode(this.refs.area);
+
+		if (!area.contains(evt.target)) {
+			this.props.onClickOutside(evt)
+		}
+	}
 
 	render() {
 		
 		return (
-			<div className={ComponentStyle['menuArea']}>
+			<div className={ComponentStyle['menuArea']} ref="area">
 				<table className={ComponentStyle['menuTable']}>
 					<tbody>
 						<tr>

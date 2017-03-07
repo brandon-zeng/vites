@@ -21,6 +21,7 @@ class HeaderComponent extends React.Component {
 
 	closeMenu() {
 		if (this.state.opened === true) {
+			console.log("close menu");
 			this.setState({opened: false, contianerClass: this.state.containerClass});
 		}
 	}
@@ -55,7 +56,7 @@ class HeaderComponent extends React.Component {
 
 	render() {
 		return (
-			<div className = {this.state.containerClass} onBlur={this.closeMenu.bind(this)}>
+			<div className = {this.state.containerClass}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button onClick={this.onOpenIconClick.bind(this)}>&#9776;</button></div>
 				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><div className={ComponentStyle['menuBuy']}></div></ReactGA.OutboundLink>
@@ -64,7 +65,7 @@ class HeaderComponent extends React.Component {
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />
 					</ReactGA.OutboundLink>
 				</div>*/}
-				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick} hideMenu={this.onOpenIconClick.bind(this)}/>
+				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick} hideMenu={this.onOpenIconClick.bind(this)} onClickOutside={this.closeMenu.bind(this)}/>
 			</div>
 		);
 	}

@@ -9,6 +9,6 @@ render(
 	<Provider store={store}>
 		<ReactRouter />
 	</Provider>, 
-	document.getElementById('content')
+	window.__myapp_container = document.getElementById('content')
 );
 
