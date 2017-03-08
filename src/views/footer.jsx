@@ -1,7 +1,28 @@
-import React from 'react';
-import ComponentStyle from '../styles/footer.less';
-import Subscribe from './subscription.jsx';
+import React from 'react'
+import ComponentStyle from '../styles/footer.less'
+import Subscribe from './subscription.jsx'
 import { Link } from 'react-router'
+import {
+  ShareButtons,
+  ShareCounts,
+  generateShareIcon,
+} from 'react-share'
+
+const {
+  FacebookShareButton,
+  GooglePlusShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  PinterestShareButton,
+  VKShareButton,
+  TelegramShareButton,
+  WhatsappShareButton,
+} = ShareButtons
+
+const FacebookIcon = generateShareIcon('facebook');
+const TwitterIcon = generateShareIcon('twitter');
+const PinterestIcon = generateShareIcon('pinterest');
+
 
 class MenuComponent extends React.Component {
 	constructor(props) {
@@ -33,7 +54,35 @@ class MenuComponent extends React.Component {
 							</div>
 							<div className={ComponentStyle['footer-section']}>
 								<h2>Connect with us</h2>
-								<div>F W P I</div>
+								<div>
+									<FacebookShareButton
+										url={"https://www.facebook.com"}
+										title={"title"}
+										picture={'NA'}
+										className={ComponentStyle['social-button']}>
+										<FacebookIcon
+										size={32}
+										round />
+									</FacebookShareButton>
+									<TwitterShareButton
+										url={"https://www.facebook.com"}
+										title={"title"}
+										picture={'NA'}
+										className={ComponentStyle['social-button']}>
+										<TwitterIcon
+										size={32}
+										round />
+									</TwitterShareButton>
+									<PinterestShareButton
+										url={"https://www.facebook.com"}
+										title={"title"}
+										picture={'NA'}
+										className={ComponentStyle['social-button']}>
+										<PinterestIcon
+										size={32}
+										round />
+									</PinterestShareButton>
+								</div>
 							</div>
 						</div>
 						<div className={ComponentStyle['footer-copyright']}> © 2016 vite originⓇ – ALL RIGHTS RESERVED - ALL TRADEMARKS ARE THE PROPERTY OF Vite Studio Inc. </div>

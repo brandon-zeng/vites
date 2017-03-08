@@ -10,7 +10,10 @@ class SpecsComponent extends React.Component {
 	render() {
 		
 		return (
-			<div style={{paddingTop: 100, minHeight: 550}}>
+			<div style={{paddingTop: 100, paddingLeft: 20, minHeight: 550}}>
+				<div className={ComponentStyle['photo-specs']}>
+					<img src={'/img/specs.png'} alt={"phone specification"}  title={"bluetooth headphone"} />
+				</div>
 				<ul className={ComponentStyle['specsContainer']}> 
 					<li><strong>AIRSNAP:</strong> Bluetooth-powered remote shutter control helps you take photos or videos with ease and elegance. Works with native camera apps and Instagram/Snapchat!</li>
 					<li><strong>BATTERY:</strong> With the latest Bluetooth V4.0 + EDR, the Vite Origin delivers up to 6 hours of playtime or 250 hours of standby on a full charge.</li>

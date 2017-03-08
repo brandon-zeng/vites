@@ -21,7 +21,6 @@ class HeaderComponent extends React.Component {
 
 	closeMenu() {
 		if (this.state.opened === true) {
-			console.log("close menu");
 			this.setState({opened: false, contianerClass: this.state.containerClass});
 		}
 	}

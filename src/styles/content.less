@@ -308,8 +308,21 @@
 		}
 	}
 
+	.photo-specs {
+		width: 30%;
+    	display: inline-block;
+    	vertical-align: top;
+
+		img {
+			width: 100%;
+		}
+	}
+
 	.specsContainer {
 		line-height: 200%;
+		display: inline-block;
+		width: 65%;
+		-webkit-margin-before: initial;
 	}
 }
 
@@ -440,8 +453,8 @@
 		overflow: visible;
 		margin: 0 auto;
 
-		.photos {
-			width: 50%;
+		.photo-left {
+			width: 25%;
 			height: 600px;
 			float: left;
 
@@ -453,11 +466,10 @@
 
 			img {
 				transition: all 0.5s ease-out;
-				padding: 2px 2px 2px 2px;
+				padding: 25px;
 				background: white;
-				border: solid 2px #ccc;
 				//width: 25%;
-				height: 250px;
+				height: 400px;
 
 				@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 					height: 200px;
@@ -514,24 +526,50 @@
 			// }
 
 						
-			img:hover {
-				-webkit-transform: scale(1.5);
-				-moz-transform: scale(1.5);
-				-o-transform: scale(1.5);
-				transform: scale(1.5);
-				z-index: 10;
+			// img:hover {
+			// 	-webkit-transform: scale(1.5);
+			// 	-moz-transform: scale(1.5);
+			// 	-o-transform: scale(1.5);
+			// 	transform: scale(1.5);
+			// 	z-index: 10;
 
-				// @media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
-				// 	-webkit-transform: scale(2);
-				// 	-moz-transform: scale(2);
-				// 	-o-transform: scale(2);
-				// 	transform: scale(2);
-				// }
+			// 	// @media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
+			// 	// 	-webkit-transform: scale(2);
+			// 	// 	-moz-transform: scale(2);
+			// 	// 	-o-transform: scale(2);
+			// 	// 	transform: scale(2);
+			// 	// }
+			// }
+		}
+
+		.photo-right {
+			width: 30%;
+			height: 600px;
+			float: left;
+
+			@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
+				float: initial;
+				width: 100%;
+				height: 220px;
+			}
+
+			img {
+				transition: all 0.5s ease-out;
+				padding: 25px;
+				background: white;
+				//width: 25%;
+				height: 400px;
+
+				@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
+					height: 200px;
+					padding: 5px 35px;
+					border: 0px;
+				}
 			}
 		}
 		
 		.summary {
-			width: 50%;
+			width: 45%;
 			float: left;
 			font-size: 24px;
 			line-height: 200%;
