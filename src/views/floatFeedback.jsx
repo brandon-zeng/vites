@@ -86,7 +86,7 @@ class FeedbackComponent extends React.Component {
 		return (
 			<div>
 				<div className={ComponentStyle['feedbackbutton']}> 
-					<img src={'/img/live_chat_offline.png'} alt={"feedback"} onClick={this.toggleModal.bind(this)} className={ComponentStyle['imgArea']}/> 
+					<img src={'/img/contact-logo.png'} alt={"feedback"} onClick={this.toggleModal.bind(this)} className={ComponentStyle['imgArea']}/> 
 				</div>
 				{ this.state.modalActive && (
 					<div>

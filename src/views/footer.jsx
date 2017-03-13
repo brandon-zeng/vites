@@ -2,6 +2,7 @@ import React from 'react'
 import ComponentStyle from '../styles/footer.less'
 import Subscribe from './subscription.jsx'
 import { Link } from 'react-router'
+import ReactGA from 'react-ga'
 import {
   ShareButtons,
   ShareCounts,
@@ -55,15 +56,20 @@ class MenuComponent extends React.Component {
 							<div className={ComponentStyle['footer-section']}>
 								<h2>Connect with us</h2>
 								<div>
-									<FacebookShareButton
-										url={"https://www.facebook.com"}
+									{/*<FacebookShareButton
+										url={"https://www.facebook.com/vitestore"}
 										title={"title"}
 										picture={'NA'}
 										className={ComponentStyle['social-button']}>
 										<FacebookIcon
 										size={32}
 										round />
-									</FacebookShareButton>
+									</FacebookShareButton>*/}
+									<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.facebook.com/vitestore" style={{display: "inline-block", cursor: "pointer"}}>
+										<FacebookIcon
+										size={32}
+										round />
+									</ReactGA.OutboundLink>
 									<TwitterShareButton
 										url={"https://www.facebook.com"}
 										title={"title"}
