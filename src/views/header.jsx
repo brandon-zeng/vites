@@ -43,6 +43,11 @@ class HeaderComponent extends React.Component {
 		}
     }
 
+	notifyBuyClick() {
+		console.log('buy button is clicked up');
+		window.notifyPixelAboutPurchase();
+	}
+
 	componentDidMount() {
         window.addEventListener("scroll", this.handleScroll.bind(this));
 		window.__myapp_container.addEventListener('click', this.handleDocumentClick.bind(this))
@@ -73,7 +78,7 @@ class HeaderComponent extends React.Component {
 			<div className = {this.state.containerClass}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button ref="menuButton">&#9776;</button></div>
-				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><div className={ComponentStyle['menuBuy']}></div></ReactGA.OutboundLink>
+				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><div className={ComponentStyle['menuBuy']} onClick={this.notifyBuyClick.bind(this)}></div></ReactGA.OutboundLink>
 				{/*<div className={ComponentStyle['amazonImg']}>
 					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />

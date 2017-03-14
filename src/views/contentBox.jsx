@@ -18,6 +18,11 @@ class contentBox extends React.Component {
 		}
 	}
 
+	notifyBuyClick() {
+		console.log('buy button is clicked down');
+		window.notifyPixelAboutPurchase();
+	}
+
 	componentWillMount() {
 		if (this.props.pageIndex === '4') {
 			this.props.fetchDb();
@@ -60,7 +65,7 @@ class contentBox extends React.Component {
 						<p>It’s finally here: </p>
 						<p>the selfie earbuds </p>
 						<p className={ComponentStyle['price']}>$49.9</p>
-						<div className={ComponentStyle['buyNow']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><span>buy<br/>now</span></ReactGA.OutboundLink></div>
+						<div className={ComponentStyle['buyNow']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9" onClick={this.notifyBuyClick.bind(this)}><span>buy<br/>now</span></ReactGA.OutboundLink></div>
 					</div>
 					<div className={ComponentStyle['imgBox']}>
 						<div className={ComponentStyle['imgMarginBox']}> </div>

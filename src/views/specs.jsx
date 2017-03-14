@@ -7,6 +7,10 @@ class SpecsComponent extends React.Component {
 		this.state = {};
 	}
 
+	componentDidMount() {
+		window.notifyPixelAboutSpecs();
+	}
+
 	render() {
 		
 		return (
