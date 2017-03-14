@@ -28,7 +28,7 @@ class SummaryComponent extends React.Component {
 						<li><div><img src={'/img/icon-camera.png'}/></div><div>Remote photo taking via Airsnap technology. Secure your phone, step away, and snap!</div></li>
 						<li><div><img src={'/img/icon-headphone.png'}/></div><div>Untangled, wireless listening!</div></li>
 						<li></li>
-						<li><div><img src={'/img/icon-gift.png'}/></div><div><b>Purchase before April 30th to get a free spider phone holder! </b></div></li>
+						<li><div><img src={'/img/icon-gift.png'}/></div><div>Purchase before April 30th to get a free spider phone holder! </div></li>
 					</ul> 
 				</div>
 				<div className={'photo-right'}>

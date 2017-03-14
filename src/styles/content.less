@@ -461,16 +461,17 @@
 		position: relative;
 		width: 98%;
 		overflow: visible;
-		margin: 0 auto;
+		margin: 20px auto;
 		display: -webkit-flex;
     	display: flex;
+		justify-content: space-between;
 
 		@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 			display: initial;
 		}
 
 		.photo-left {
-			height: 500px;
+			// height: 500px;
 
 			@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 				float: initial;
@@ -480,10 +481,10 @@
 
 			img {
 				// transition: all 0.5s ease-out;
-				padding: 25px;
+				padding: 40px;
 				background: white;
 				//width: 25%;
-				height: 400px;
+				height: 250px;
 
 				@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 					height: 200px;
@@ -557,7 +558,7 @@
 		}
 
 		.photo-right {
-			height: 500px;
+			// height: 500px;
 
 			@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 				float: initial;
@@ -567,14 +568,14 @@
 
 			img {
 				// transition: all 0.5s ease-out;
-				padding: 25px;
+				padding: 40px;
 				background: white;
 				//width: 25%;
-				height: 400px;
+				height: 250px;
 
 				@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 					height: 200px;
-					padding: 5px 35px;
+					padding: 5px 40px;
 					border: 0px;
 				}
 			}
