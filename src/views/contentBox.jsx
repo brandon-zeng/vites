@@ -67,9 +67,9 @@ class contentBox extends React.Component {
 						<img src={'/img/main-phone-square.jpg'} alt={"bluetooth selfie headphone"}  className={ComponentStyle['mainImg']} title={"bluetooth selfie headphone"} /> 
 					</div>
 				</div>
-				<Stories />
-				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<SummaryComponent isOrdered={true} />
+				<Stories />
+				{/*<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>*/}
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30, overflow: 'auto' }}>
 					<div className={ComponentStyle['feature']}> 

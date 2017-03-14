@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import ReactGA from 'react-ga'
 import BrandingComponent from './branding.jsx';
 import MenuComponent from './menu.jsx';
@@ -12,7 +13,6 @@ class HeaderComponent extends React.Component {
 	};
 
 	onOpenIconClick() {
-		console.log(this.state.opened);
 		if (this.state.opened === false) {
 			this.setState({opened: true, contianerClass: this.state.containerClass});
 		} else {
@@ -35,9 +35,6 @@ class HeaderComponent extends React.Component {
 	}
 
 	handleScroll(event) {
-        // Do something generic, if you have to
-        // console.log("ScrollWrapper's handleScroll: " + document.body.scrollTop);
-
         // Call the passed-in prop
         if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
 			this.setState({opened: this.state.opened, containerClass: ComponentStyle['headerContainerWhite']})
@@ -48,25 +45,41 @@ class HeaderComponent extends React.Component {
 
 	componentDidMount() {
         window.addEventListener("scroll", this.handleScroll.bind(this));
+		window.__myapp_container.addEventListener('click', this.handleDocumentClick.bind(this))
     }
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll.bind(this));
+		window.__myapp_container.removeEventListener('click', this.handleDocumentClick.bind(this))
     }
 
+
+	/* using fat arrow to bind to instance */
+	handleDocumentClick(evt) {
+		const area = ReactDOM.findDOMNode(this.refs.area);
+		const menuButton = ReactDOM.findDOMNode(this.refs.menuButton);
+
+		if (menuButton.contains(evt.target)) {
+			this.onOpenIconClick();
+		} else {
+			if (!area.contains(evt.target)) {
+				this.closeMenu(evt)
+			}
+		}
+	}
+
 	render() {
-		console.log("current state is: " + this.state.opened);
 		return (
 			<div className = {this.state.containerClass}>
 				<BrandingComponent onClick={this.props.onClick}/>
-				<div className={ComponentStyle['menuIcon']}><button onClick={this.onOpenIconClick.bind(this)}>&#9776;</button></div>
+				<div className={ComponentStyle['menuIcon']}><button ref="menuButton">&#9776;</button></div>
 				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><div className={ComponentStyle['menuBuy']}></div></ReactGA.OutboundLink>
 				{/*<div className={ComponentStyle['amazonImg']}>
 					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />
 					</ReactGA.OutboundLink>
 				</div>*/}
-				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.props.onClick} onClickOutside={this.closeMenu.bind(this)}/>
+				<MenuComponent styleName={this.getMenuClass()} pageIndex={this.props.pageIndex} onClick={this.closeMenu.bind(this)} ref="area"/>
 			</div>
 		);
 	}

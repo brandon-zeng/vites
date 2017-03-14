@@ -78,6 +78,8 @@
 	}
 	.menuIcon {
 		display: none;
+		cursor: pointer;
+		outline: none;
 
 		// @media screen and (max-width:860px), screen and (max-device-width: 1080px) {
 		// 	display: block;
@@ -90,12 +92,20 @@
 			position: absolute;
 			top: 5px;
 			left: 10px;
+			cursor: pointer;
+			outline: none;
 		}
 
 		button {
 			border: 0;
 			background-color: transparent;
 			font-size: 36px;
+			cursor: pointer;
+			outline: none;
+
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 	.menuBuy {
@@ -115,6 +125,7 @@
 		// border-radius: 20px;
 		content:url(/img/amazon-button2.png);
 		cursor: pointer;
+		width: 130px;
 
 		// @media screen and (max-width:860px), screen and (max-device-width: 1080px) {
 		// 	top: 32px;
@@ -164,7 +175,7 @@
 			float: left;
 			font-size: 24px;
 		    width: 160px;
-			background-color: forestgreen;
+			background-color: darkslategray;
     		margin-top: -10px;
 	    	margin-right: inherit;
 		}
@@ -183,6 +194,7 @@
 		// }
 		@media screen and (max-device-width: 1080px) {
 			font-size: 36px;
+			margin: 10px 0px;
 		}
 	}
 	.menuTable td {
@@ -220,6 +232,7 @@
 		// }
 		@media screen and (max-width:2400px), screen and (max-device-width: 1080px) {
 			display: none;
+			left: -200px;
 		}
 	}
 
@@ -231,6 +244,8 @@
 		// }
 		@media screen and (max-width:2400px), screen and (max-device-width: 1080px) {
 			display: block;
+			transition: 1s;
+			left: 0px;
 		}
 	}
 

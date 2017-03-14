@@ -23,12 +23,13 @@ class SummaryComponent extends React.Component {
 					<img src={'/img/viteread.jpg'} alt={"read in music"}  title={"bluetooth selfie headphone"} /> 				*/}
 				</div>
 				<div className={'summary'}> 
-					<h3>Connect Vite Origin to your smartphones via Bluetooth for :</h3>
+					<h3>The best way to take selfies</h3>
 					<ul className={'itemText'}> 
-						<li>Untangled, wireless listening</li>
-						<li>Remote photo taking via Airsnap technology. Secure your phone, step away, and snap!</li>
+						<li><div><img src={'/img/icon-camera.png'}/></div><div>Remote photo taking via Airsnap technology. Secure your phone, step away, and snap!</div></li>
+						<li><div><img src={'/img/icon-headphone.png'}/></div><div>Untangled, wireless listening!</div></li>
+						<li></li>
+						<li><div><img src={'/img/icon-gift.png'}/></div><div><b>Purchase before April 30th to get a free spider phone holder! </b></div></li>
 					</ul> 
-					<h3>Purchase before April 30th to get a free spider phone holder! It holds you phone in any angle for better photos</h3>
 				</div>
 				<div className={'photo-right'}>
 					<img src={'/img/holder.jpg'} alt={"phone holder"}  title={"bluetooth holder headphone"} />
