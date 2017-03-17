@@ -9,7 +9,7 @@ class contentBox extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {opened: false};
 	};
 
 	componentWillReceiveProps(nextProps) {
@@ -19,8 +19,25 @@ class contentBox extends React.Component {
 	}
 
 	notifyBuyClick() {
-		console.log('buy button is clicked down');
+		this.setState({opened: true});
 		window.notifyPixelAboutPurchase();
+	}
+
+	getBuyOptions() {
+		return <div className={ComponentStyle['buyOptions']}>
+					<table>
+						<tr>
+							<td>
+								<ReactGA.OutboundLink eventLabel="buyFacebook" to="https://www.facebook.com/commerce/products/1438699939505294" ><div> buy from facebook</div> </ReactGA.OutboundLink>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ReactGA.OutboundLink eventLabel="buyAmazon" to="https://www.amazon.com/dp/B01MYXSBM9" ><div> buy from Amazon </div> </ReactGA.OutboundLink>
+							</td>
+						</tr>
+					</table>
+				</div>;
 	}
 
 	componentWillMount() {
@@ -57,6 +74,7 @@ class contentBox extends React.Component {
 				textDiv = <div style={{width: 500, height: 100}}> 1 </div>;
 		}
 
+
 		return (
 			<div>
 				<div className={containerClass} title={"lifestyle with vite origin selfie headphone"}>
@@ -65,7 +83,10 @@ class contentBox extends React.Component {
 						<p>It’s finally here: </p>
 						<p>the selfie earbuds </p>
 						<p className={ComponentStyle['price']}>$49.9</p>
-						<div className={ComponentStyle['buyNow']}><ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9" onClick={this.notifyBuyClick.bind(this)}><span>buy<br/>now</span></ReactGA.OutboundLink></div>
+						<div className={ComponentStyle['buyNow']} onClick={this.notifyBuyClick.bind(this)}><span>buy<br/>now</span></div>
+						{
+							(this.state.opened) && this.getBuyOptions()
+						}
 					</div>
 					<div className={ComponentStyle['imgBox']}>
 						<div className={ComponentStyle['imgMarginBox']}> </div>

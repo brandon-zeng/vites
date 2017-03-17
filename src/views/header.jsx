@@ -78,7 +78,7 @@ class HeaderComponent extends React.Component {
 			<div className = {this.state.containerClass}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button ref="menuButton">&#9776;</button></div>
-				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9"><div className={ComponentStyle['menuBuy']} onClick={this.notifyBuyClick.bind(this)}></div></ReactGA.OutboundLink>
+				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.facebook.com/commerce/products/1438699939505294"><div className={ComponentStyle['menuBuy']} onClick={this.notifyBuyClick.bind(this)}></div></ReactGA.OutboundLink>
 				{/*<div className={ComponentStyle['amazonImg']}>
 					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />
