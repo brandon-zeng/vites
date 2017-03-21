@@ -94,7 +94,6 @@ class contentBox extends React.Component {
 					</div>
 				</div>
 				<SummaryComponent isOrdered={true} />
-				<Stories />
 				{/*<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>*/}
 				<hr style={{clear: "both", marginTop: 20, marginBottom: 20}}/>
 				<div style={{position: "relative", display: "block", margin: 10, marginTop: 30, overflow: 'auto' }}>
@@ -119,6 +118,8 @@ class contentBox extends React.Component {
 						<div className={ComponentStyle['textArea']}> <h4></h4> <p >Works with your favorite social and native camera apps</p></div> 
 					</div>
 				</div>
+
+				<Stories />
 			</div>
 		);
 	}

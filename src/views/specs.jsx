@@ -14,7 +14,7 @@ class SpecsComponent extends React.Component {
 	render() {
 		
 		return (
-			<div style={{paddingTop: 100, paddingLeft: 20, minHeight: 550}}>
+			<div style={{paddingTop: 80, paddingLeft: 20, minHeight: 550}}>
 				<div className={ComponentStyle['photo-specs']}>
 					<img src={'/img/specs.png'} alt={"phone specification"}  title={"bluetooth headphone"} />
 				</div>

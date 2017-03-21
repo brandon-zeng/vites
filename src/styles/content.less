@@ -355,7 +355,25 @@
 		width: 65%;
 		-webkit-margin-before: initial;
 	}
+
+	.faqContainer {
+		margin: 0px 30px;
+		
+		.faqQuestion {
+			font-weight: 700;
+		}
+
+		.faqAnswer {
+			padding-left: 30px;
+
+			&:before {
+				content: " -   ";
+			}
+		}
+	}
 }
+
+//end of local
 
 	.storyBlock(@image) {
 		position: relative;

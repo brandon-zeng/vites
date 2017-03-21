@@ -10,6 +10,7 @@ import Specs from './views/specs.jsx'
 import About from './views/about.jsx'
 import Blogs from './views/blogs.jsx'
 import Commercial from './views/commercial.jsx'
+import Faq from './views/faq.jsx'
 
 class ReactRouter extends React.Component {
 	constructor(props) {
@@ -33,7 +34,7 @@ class ReactRouter extends React.Component {
 					<Route path="stories" component={Stories} />
 					<Route path="specs" component={Specs} />
 					<Route path="about" component={About} />
-					{/*<Route path="blogs" component={Blogs} />*/}
+					<Route path="faq" component={Faq} />
 					<Route path="commercial" component={Commercial} />
 		    </Route>
 		  </Router>
