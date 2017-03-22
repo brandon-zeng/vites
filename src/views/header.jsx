@@ -4,6 +4,15 @@ import ReactGA from 'react-ga'
 import BrandingComponent from './branding.jsx';
 import MenuComponent from './menu.jsx';
 import ComponentStyle from '../styles/header.less';
+import {
+  ShareButtons,
+  ShareCounts,
+  generateShareIcon,
+} from 'react-share';
+
+const FacebookIcon = generateShareIcon('facebook');
+const TwitterIcon = generateShareIcon('twitter');
+const PinterestIcon = generateShareIcon('pinterest');
 
 class HeaderComponent extends React.Component {
 
@@ -78,7 +87,29 @@ class HeaderComponent extends React.Component {
 			<div className = {this.state.containerClass}>
 				<BrandingComponent onClick={this.props.onClick}/>
 				<div className={ComponentStyle['menuIcon']}><button ref="menuButton">&#9776;</button></div>
-				<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.facebook.com/commerce/products/1438699939505294"><div className={ComponentStyle['menuBuy']} onClick={this.notifyBuyClick.bind(this)}></div></ReactGA.OutboundLink>
+				<div className={ComponentStyle['social-section']}>
+					<div className={ComponentStyle['social-area']}>
+						<div>Follow Us</div>
+						<div>
+							<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.facebook.com/vitestore" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
+								<FacebookIcon
+								size={32}
+								round />
+							</ReactGA.OutboundLink>
+							<ReactGA.OutboundLink eventLabel="buyButton" to="https://twitter.com/vitestore" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
+								<TwitterIcon
+								size={32}
+								round />
+							</ReactGA.OutboundLink>
+							<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.pinterest.com/vitestudio" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
+								<PinterestIcon
+								size={32}
+								round />
+							</ReactGA.OutboundLink>
+						</div>
+					</div>
+					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.facebook.com/commerce/products/1438699939505294"><div className={ComponentStyle['menuBuy']} onClick={this.notifyBuyClick.bind(this)}></div></ReactGA.OutboundLink>
+				</div>
 				{/*<div className={ComponentStyle['amazonImg']}>
 					<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.amazon.com/dp/B01MYXSBM9">
 						<img src="img/amazon-buy.png" alt="vite store buy from Amazon" height="42" width="42" />

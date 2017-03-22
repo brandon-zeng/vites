@@ -70,24 +70,16 @@ class MenuComponent extends React.Component {
 										size={32}
 										round />
 									</ReactGA.OutboundLink>
-									<TwitterShareButton
-										url={"https://www.facebook.com"}
-										title={"title"}
-										picture={'NA'}
-										className={ComponentStyle['social-button']}>
+									<ReactGA.OutboundLink eventLabel="buyButton" to="https://twitter.com/vitestore" style={{display: "inline-block", cursor: "pointer"}}>
 										<TwitterIcon
 										size={32}
 										round />
-									</TwitterShareButton>
-									<PinterestShareButton
-										url={"https://www.facebook.com"}
-										title={"title"}
-										picture={'NA'}
-										className={ComponentStyle['social-button']}>
+									</ReactGA.OutboundLink>
+									<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.pinterest.com/vitestudio" style={{display: "inline-block", cursor: "pointer"}}>
 										<PinterestIcon
 										size={32}
 										round />
-									</PinterestShareButton>
+									</ReactGA.OutboundLink>
 								</div>
 							</div>
 						</div>
