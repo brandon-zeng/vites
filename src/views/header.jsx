@@ -89,19 +89,18 @@ class HeaderComponent extends React.Component {
 				<div className={ComponentStyle['menuIcon']}><button ref="menuButton">&#9776;</button></div>
 				<div className={ComponentStyle['social-section']}>
 					<div className={ComponentStyle['social-area']}>
-						<div>Follow Us</div>
 						<div>
-							<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.facebook.com/vitestore" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
+							<ReactGA.OutboundLink eventLabel="fbButton" to="https://www.facebook.com/vitestore" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
 								<FacebookIcon
 								size={32}
 								round />
 							</ReactGA.OutboundLink>
-							<ReactGA.OutboundLink eventLabel="buyButton" to="https://twitter.com/vitestore" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
+							<ReactGA.OutboundLink eventLabel="twButton" to="https://twitter.com/vitestore" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
 								<TwitterIcon
 								size={32}
 								round />
 							</ReactGA.OutboundLink>
-							<ReactGA.OutboundLink eventLabel="buyButton" to="https://www.pinterest.com/vitestudio" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
+							<ReactGA.OutboundLink eventLabel="pinButton" to="https://www.pinterest.com/vitestudio" style={{display: "inline-block", marginLeft: 5, cursor: "pointer"}}>
 								<PinterestIcon
 								size={32}
 								round />

@@ -18,6 +18,10 @@
         overflow: auto;
 		background-color: #fafcf9;
 
+		@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
+			height: 90vh;
+		}
+
     	.textArea {
 			font-family: "Fjalla One", "HelveticaNeue", "Helvetica Neue", sans-serif;
 			position: absolute;
@@ -126,7 +130,7 @@
     		overflow: auto;
 
 			@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
-				min-width: 0px;
+				min-width: 720px;
 			}
 
 			.imgMarginBox {
@@ -150,6 +154,7 @@
 
 				@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 					margin-top: 0px;
+					width: 100%;
 				}
 			}
 		}
@@ -523,7 +528,9 @@
 		justify-content: space-between;
 
 		@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
-			display: initial;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
 		}
 
 		.photo-left {
@@ -531,8 +538,8 @@
 
 			@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 				float: initial;
-				width: 100%;
 				height: 220px;
+				order: 1;
 			}
 
 			img {
@@ -618,8 +625,8 @@
 
 			@media screen and (max-width: @mobileWidth), screen and (max-device-width: @maxDeviceWidth) {
 				float: initial;
-				width: 100%;
 				height: 220px;
+				order: 2;
 			}
 
 			img {
@@ -665,6 +672,7 @@
 				float: inherit;
 				width: 90%;
 				margin: 0 auto;
+				order: 3;
 			}
 		}
 	}
